@@ -1,0 +1,181 @@
+<!--pages/JDPages/JDIndex/Index/JDIndex.wxml-->
+<view class="container">
+	<view id="TopFormControl" class="input-group">
+		<view class="form-control-group">
+			<input class="form-control" type="text" placeholder="衬衫男" value="{{src}}"></input>
+			<text class="jzIcon jzIcon-search"></text>
+			<text class="jzIcon jzIcon-camera" bindtap="TakePhoto"></text>
+		</view>
+	</view>
+
+	<view id="TopBadgeGroup" class="search-group">
+		<text class="badge">热搜</text>
+		<block wx:for="{{HotSearchs}}" wx:for-item="SearchItem" wx:for-index="SearchIndex">
+			<text class="badge-ellipse">{{SearchItem.HotTitle}}</text>
+		</block>
+	</view>
+
+  <view id="AdCarousel" class="carousel">
+	     	<swiper  indicator-dots="{{indicatorDots}}" autoplay="{{autoPlay}}" interval="500000" duration="100" 
+					bindchange="AdPromotChange">
+		<block wx:for="{{AdPromotions}}" wx:for-item="Promotion">
+			<swiper-item class="thumbnail">
+				<view class="thumbnail-img">
+					<image src="{{Promotion.ImgUrl}}" mode="aspectFit"></image>
+				</view>
+			</swiper-item>
+		</block>
+	</swiper>
+			<view class="badge-group-indicator">
+		   <block wx:for="{{AdPromotions}}" wx:for-item="Promotion">
+			    <text class="badge-indicator {{index==AdPromoteIndex?'active':''}}"></text>
+			 </block>
+		</view>
+	</view>
+
+<view id="NavCarousel" class="carousel">
+	<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoPlay}}" interval="500000" 
+	        bindchange="BigClsChange">
+		<block wx:for="{{BigClsList}}" wx:for-item="BigCls" wx:for-index="BigClsIndex">
+			<swiper-item>
+				<view class="thumbnail-group">
+					<block wx:for="{{BigCls.BigClsTens}}" wx:for-item="ClsObj">
+						<view class="Anchor-Item">
+							<text class="jzIcon {{ClsObj.Icon}} badge-circle"></text>
+							<text>{{ClsObj.Title}}</text>
+						</view>
+					</block>
+				</view>
+			</swiper-item>
+		</block>
+	</swiper>
+	<view class="badge-group-indicator">
+		   <block wx:for="{{BigClsList}}">
+			    <text class="badge-indicator {{index==BigClsIndex?'active':''}}"></text>
+			 </block>
+		</view>
+</view>
+
+	<view class="container16">
+		<view id="SeckillArea" class="card">
+			<view class="header">
+				    <text>京东秒杀</text>
+						<view class="badge-group">
+								<text class="badge-ellipse">{{Times}}点场</text>
+                <text class="badge-ellipse">{{KillTime}}</text>
+						</view>
+				    <text class="small">更多好货限时疯抢</text>
+			</view>
+			<view class="thumbnail-group">
+				<block wx:for="{{SeckillPromotions.Seckills}}" wx:for-item="Seckill">
+					<view class="thumbnail">
+						<view class="thumbnail-img">
+							<image src="{{Seckill.GoodImg}}" mode="aspectFit"></image>
+						</view>
+						<view class="thumbnail-caption">
+							<text class="NewPrice">{{Seckill.NewPrice}}</text>
+							<text class="OldPrice">{{Seckill.OldPrice}}</text>
+						</view>
+					</view>
+				</block>
+			</view>
+		</view>
+
+		<view id="PromoteArea" class="card">
+			<view class="thumbnail-group">
+				<block wx:for="{{Promotions}}" wx:for-item="PromoteObj">
+					<view class="thumbnail">
+						<view class="thumbnail-caption-header">
+							<text>{{PromoteObj.PromotionName}}</text>
+							<text class="small">{{PromoteObj.SubTitle}}</text>
+						</view>
+						<view class="thumbnail-img">
+							<image src="{{PromoteObj.Promotion.GoodImg}}" mode="aspectFit"></image>
+						</view>
+					</view>
+				</block>
+			</view>
+		</view>
+
+		<view id="HandPick" class="card">
+			<view class="header">
+				<text>{{HandPick.Title}}</text>
+				<text class="small">查看全部</text>
+			</view>
+			<view class="Body">
+				<view class="thumbnail-group">
+					<block wx:for="{{HandPick.Cls}}" wx:for-item="HandPickObj">
+						<view class="thumbnail">
+							<view class="thumbnail-caption-header">
+								<text>{{HandPickObj.ClsName}}</text>
+								<text class="small">{{HandPickObj.SubTitle}}</text>
+							</view>
+							<view class="thumbnail-img">
+								<image src="{{HandPickObj.Goods.GoodImg}}" mode="aspectFit"></image>
+							</view>
+						</view>
+					</block>
+				</view>
+			</view>
+		</view>
+
+		<view id="JSelf" class="card">
+			<view class="header">
+				<text>{{JDSelf.Title}}</text>
+			</view>
+			<view class="thumbnail-group">
+				<block wx:for="{{JDSelf.Cls}}" wx:for-item="JDSelfObj">
+					<view class="thumbnail">
+						<view class="thumbnail-img">
+							<image src="{{JDSelfObj.Goods.GoodImg}}" mode="aspectFit"></image>
+						</view>
+						<view class="thumbnail-caption">
+							<text class="badge-ellipse">{{JDSelfObj.ClsName}}</text>
+							<text class="subtitle">{{JDSelfObj.SubTitle}}</text>
+						</view>
+					</view>
+				</block>
+			</view>
+		</view>
+
+		<view id="goods" class="Card">
+			<view class="nav-tabs">
+				<block wx:for="{{GoodClsNavs}}" wx:for-item="GoodCls">
+					<view class="nav-item {{(CurrentId==GoodCls.ClsId)?'active':''}}" data-target="{{GoodCls.ClsId}}" bindtap="TabToggle">
+						<text>{{GoodCls.ClsName}}</text>
+						<text class="small">{{GoodCls.SubTitle}}</text>
+					</view>
+				</block>
+			</view>
+
+			<view class="tab-content">
+				<block wx:for="{{Goods}}" wx:for-item="Good">
+					<view class="tab-panel" hidden="{{!(CurrentId==Good[0].ParentId)}}" data-parent="{{Good[0].ParentId}}">
+						<view class="thumbnail-group">
+							<block wx:for="{{Good}}" wx:for-item="GObj">
+								<view class="thumbnail">
+									<view class="thumbnail-img">
+										<image src="{{GObj.GoodImg}}" mode="aspectFit"></image>
+									</view>
+									<view class="thumbnail-caption">
+										<view class="Title">
+											<text>{{GObj.logistics}} {{GObj.GoodName}}</text>
+										</view>
+										<view class="Price">
+											<text class="good-price">{{GObj.NewPrice}}</text>
+											<text class="badge-ellipse">看相似</text>
+										</view>
+										<view class="Prompt">
+											<text>{{GObj.Prompt}}</text>
+										</view>
+									</view>
+								</view>
+							</block>
+						</view>
+					</view>
+				</block>
+			</view>
+		</view>
+	</view>
+
+</view>
