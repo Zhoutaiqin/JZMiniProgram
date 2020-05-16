@@ -1,1 +1,110 @@
 /* pages/JDPages/JDCls/Cls/ClsIndex.wxss */
+/* pages/JDPages/JDIndex/Index/JDIndex.wxss */
+@import "../../../css/jzIco.wxss";
+@import "../../../css/jzControl.wxss";
+.card{
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/*header:14px,即26rpx；非header:12px,即21rpx;
+  背景图适用于不靠用户上传的图片
+*/
+.head,
+.thumbnail-caption-header{
+  font-size: 26rpx;
+}
+.thumbnail-caption,
+.nav-item{
+  font-size: 22rpx;
+}
+.container{
+   padding: 0;
+   align-items: flex-start;
+   background-color: #f7f7f7;
+}
+.input-group,
+.search-group{
+   margin-bottom: 0;
+   background-color: #fff;
+   border-top: 1px solid #f1f1f1;
+   border-bottom: 1px solid #f1f1f1;
+}
+#TopFormControl .jzIcon{
+   display: flex;
+   align-items: center;
+ 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 99;
+}
+.jzIcon-search{
+   left: 2rpx;   
+   color: #d0d0d0;
+}
+.form-control{
+  background-color: #f1f1f1;
+}
+
+#ClsContenter .nav-tabs{
+    flex-basis: 20%;
+    background-color: #f8f8f8;
+    padding: 0;
+}
+#ClsContenter{
+  /*height: 1000rpx;*/
+  margin-bottom: 0;
+}
+#ClsContenter .nav-content,
+#ClsContenter .tab-content{
+  height: 1050rpx;
+  overflow-y: auto;
+}
+
+#ClsContenter .nav-tabs>.nav-item{
+  padding: 25rpx;
+  justify-content: center;
+}
+#ClsContenter .nav-tabs>.nav-item.active{
+    color: #e93b3d;
+    background-color: #fff;
+    font-size: 26rpx;
+}
+#ClsContenter .tab-content{
+    flex-basis: 80%;
+}
+#Advertises swiper{
+    margin-top: 27.15rpx;
+    height: 150rpx;
+}
+#PromotionArea .thumbnail-group>.thumbnail{
+    flex-basis: 48%;
+    height: 100rpx;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8rpx;
+    margin-right: 8rpx;
+    background-color: #f8f8f8;
+    padding: 0;
+    border-radius: 0;
+}
+#PromotionArea .thumbnail-group>.thumbnail>.thumbnail-caption-header,
+#PromotionArea .thumbnail-group>.thumbnail>.thumbnail-img{
+  flex-basis: 50%;
+}
+#PromotionArea .thumbnail-group>.thumbnail>.thumbnail-caption-header>.small{
+   margin-top: 8rpx;
+   color: #e93b3d;
+}
+#SmallCls .thumbnail-group>.thumbnail{
+  flex-basis: 33%;
+  padding:25rpx;
+}
+#SmallCls .thumbnail-group>.thumbnail>.thumbnail-img>image{
+     height: 150rpx;
+}
+.tab-panel{
+   padding-left: 14.48rpx;
+   padding-right: 14.48rpx;
+}

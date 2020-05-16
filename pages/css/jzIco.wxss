@@ -918,8 +918,8 @@
  */
 .bgIcon{
 	background-repeat: no-repeat;
-	width: 21px;/*有高度且是box-sizing，所以padding无效*/
-	height: 21px;
+	width: 38rpx;/*有高度且是box-sizing，所以padding无效*/
+	height: 38rpx;
 	
 	display: inline-block;
 	margin-right: 5px;

@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/JDPages/JDFocus/Focus/FocusIndex",
     "pages/JDPages/JDIndex/Index/JDIndex",
+    "pages/JDPages/JDCls/Cls/ClsIndex",  
     "pages/index/index",
     "pages/logs/logs", 
-    "pages/JDPages/JDFocus/Focus/FocusIndex",
-    "pages/JDPages/JDCls/Cls/ClsIndex",
+    
     "pages/JDPages/JDCart/Cart/CartIndex",
     "pages/JDPages/JDSelf/Self/SelfIndex"
   ],
@@ -17,18 +18,18 @@
       "selectedColor":"#e22d3d",
       "backgroundColor":"#ffffff",
       "list":[
+        {
+          "pagePath":"pages/JDPages/JDFocus/Focus/FocusIndex",
+          "text":"推荐"
+        },
          {
             "pagePath":"pages/JDPages/JDIndex/Index/JDIndex",
             "text":"首页"
          },
          {
-           "pagePath":"pages/JDPages/JDCls/Cls/ClsIndex",
-           "text":"分类"
-         },
-         {
-           "pagePath":"pages/JDPages/JDFocus/Focus/FocusIndex",
-           "text":"推荐"
-         },
+          "pagePath":"pages/JDPages/JDCls/Cls/ClsIndex",
+          "text":"分类"
+        },
          {
            "pagePath":"pages/JDPages/JDCart/Cart/CartIndex",
            "text":"购物车"

@@ -1,1 +1,89 @@
 /* pages/JDPages/JDFocus/Focus/FocusIndex.wxss */
+/* pages/JDPages/JDCls/Cls/ClsIndex.wxss */
+/* pages/JDPages/JDIndex/Index/JDIndex.wxss */
+@import "../../../css/jzIco.wxss";
+@import "../../../css/jzControl.wxss";
+.card{
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+/*header:14px,即26rpx；非header:12px,即21rpx;
+  背景图适用于不靠用户上传的图片
+*/
+.container{
+   padding: 0;
+   align-items: flex-start;
+   background-color: #f7f7f7;
+}
+.input-group,
+.search-group{
+   margin-bottom: 0;
+   background-color: #fff;
+   border-top: 1px solid #f1f1f1;
+   border-bottom: 1px solid #f1f1f1;
+}
+#TopFormControl .jzIcon{
+   display: flex;
+   align-items: center;
+ 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 99;
+}
+.jzIcon-search{
+   left: 2rpx;   
+   color: #d0d0d0;
+}
+.form-control{
+  background-color: #f1f1f1;
+}
+.nav-tabs{
+    width: 100%;
+    padding: 0;
+    overflow-x: scroll;
+}
+.nav-tabs>.nav-item{
+  padding:20rpx 25rpx;
+}
+.nav-tabs>.nav-item.active{
+    color: #e93b3d;
+    font-size: 32rpx;
+    font-weight: 700;
+}
+.TopNavBar{
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color: #fff;
+   z-index: 99;
+   width: 100%;
+}
+
+#ClsContenter{
+  /*height: 1000rpx;*/
+  margin-bottom: 0;
+  margin-top: 165rpx;
+}
+#Goods .thumbnail-group,
+#Goods .thumbnail-container{
+  padding: 7rpx;
+}
+#Goods .thumbnail-group .thumbnail{
+  background-color: #fff;
+}
+#Goods .thumbnail-group .thumbnail>.thumbnail-img>image{
+     height: 280rpx;
+}
+#Goods .thumbnail-group .thumbnail>.thumbnail-caption .title-container .badge-ellipse{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  border-radius: 2rpx;
+}
+#Goods .thumbnail-group .thumbnail-caption .title-container .caption{
+  -webkit-line-clamp: 2;
+}

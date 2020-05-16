@@ -1,2 +1,82 @@
-<!--pages/JDPages/JDCls/Cls/ClsIndex.wxml-->
-<text>pages/JDPages/JDCls/Cls/ClsIndex.wxml</text>
+<!--pages/JDPages/JDCls/Cls/ClsIndex.wxml
+    header:card-header,thumbnail-caption-header,nav-header,list-item-header
+-->
+<view class="container">
+  <view id="TopFormControl" class="input-group">
+		<view class="form-control-group">
+			<input class="form-control" type="text" placeholder="衬衫男"></input>
+			<text class="jzIcon jzIcon-search"></text>
+		</view>
+	</view>
+
+  <view id="ClsContenter" class="card horizontal">
+    <view class="nav-content">
+      <view class="nav-tabs vertical">
+         <block wx:for="{{BigClsList}}" wx:for-item="BigCls" wx:for-index="BigClsIndex">
+               <view class="nav-item {{SelectId==BigCls.ClsId?'active':''}}" data-id="{{BigCls.ClsId}}" bindtap="NavTabClick">{{BigCls.ClsName}}</view>
+         </block>
+     </view>   
+    </view>
+
+     <view class="tab-content">
+         <view class="tab-panel">
+              <view id="Advertises" class="carousel {{(AdvertiseList.length>0)?'':'hidden'}}">
+                    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoPlay}}" interval="5000" duration="500">
+                        <block wx:for="{{AdvertiseList}}">
+                           <swiper-item class="thumbnail">
+                                 <view class="thumbnail-img">
+                                     <image src="{{item.ImgUrl}}" mode="aspectFit"></image>
+                                 </view>                        
+                           </swiper-item>
+                        </block>
+                    </swiper>
+              </view>
+
+                            <view class="thumbnail {{(Advertise!=null)?'':'hidden'}}">
+                                 <view class="thumbnail-img">
+                                     <image src="{{Advertise.ImgUrl}}" mode="aspectFit"></image>
+                                 </view>
+                            </view>                           
+
+
+              <view id="PromotionArea" class="card {{(PromotionList!=null && PromotionList.length>0)?'':'hidden'}}">
+                 <view class="header">专场推荐</view>
+                 <view class="thumbnail-group">
+                      <block wx:for="{{PromotionList}}" wx:for-item="Promotion" wx:for-index="PromotIndex">
+                          <view class="thumbnail horizontal">
+                              <view class="thumbnail-caption-header">
+                                  <text>{{Promotion.PromotionName}}</text>
+                                  <text class="small">{{Promotion.SubTitle}}</text>
+                              </view>
+                              <view class="thumbnail-img">
+                                  <image src="{{Promotion.ImgUrl}}" mode="aspectFit"></image>
+                              </view>
+                          </view>
+                      </block>
+                 </view>
+              </view>
+
+<view id="SmallCls">
+    <block wx:for="{{SmallClsList}}" wx:for-item="SmallCls">
+    <view class="card">
+                 <view class="header" data-id="{{SmallCls.ClsId}}">{{SmallCls.ClsName}}</view>
+                 <view class="thumbnail-group">
+                       <block wx:for="{{SmallCls.Cls}}" wx:for-item="Cls" wx:for-index="GoodIndex">
+                             <view class="thumbnail" data-id="{{Cls.ClsId}}">
+                                  <view class="thumbnail-img">
+                                     <image src="{{Cls.ImgUrl}}" mode="aspecFit"></image>
+                                  </view>
+                                  <view class="thumbnail-caption">
+                                      <text>{{Cls.ClsName}}</text>
+                                  </view>
+                             </view>
+                       </block>   
+                 </view>
+              </view>
+    </block>
+</view>
+              
+         </view>
+     </view>
+  </view>
+</view>

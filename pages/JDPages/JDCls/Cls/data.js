@@ -1,0 +1,1146 @@
+
+/*大类*/
+var BigClsList = [
+  {
+      "ClsId": "B001",
+      "ClsName": "热搜推荐"
+    },
+    {
+      "ClsId": "B002",
+      "ClsName": "食品酒水"
+    },
+    {
+      "ClsId": "B003",
+      "ClsName": "生鲜果蔬"
+    },
+    {
+      "ClsId": "B004",
+      "ClsName": "美妆护肤"
+    },
+    {
+      "ClsId": "B005",
+      "ClsName": "个护清洁"
+    },
+    {
+      "ClsId": "B006",
+      "ClsName": "精品男装"
+    },
+    {
+      "ClsId": "B007",
+      "ClsName": "精品女装"
+    },
+    {
+      "ClsId": "B008",
+      "ClsName": "内衣配饰"
+    },
+    {
+      "ClsId": "B009",
+      "ClsName": "鞋靴箱包"
+    },
+    {
+      "ClsId": "B010",
+      "ClsName": "手机数码"
+    },
+    {
+      "ClsId": "B011",
+      "ClsName": "家用电器"
+    },
+    {
+      "ClsId": "B012",
+      "ClsName": "电脑办公"
+    },
+    {
+      "ClsId": "B013",
+      "ClsName": "运动户外"
+    },
+    {
+      "ClsId":"B014",
+      "ClsName": "汽车生活"
+    },
+    {
+      "ClsId": "B015",
+      "ClsName": "母婴童装"
+    },
+    {
+      "ClsId": "B016",
+      "ClsName": "玩具乐器"
+    },
+    {
+      "ClsId": "B017",
+      "ClsName": "家居厨具"
+    },
+    {
+      "ClsId": "B018",
+      "ClsName": "计生情趣"
+    },
+    {
+      "ClsId": "B019",
+      "ClsName": "医药保健"
+    },
+    {
+      "ClsId": "B020",
+      "ClsName": "图书音像"
+    },
+    {
+      "ClsId": "B021",
+      "ClsName": "钟表珠宝"
+    },
+    {
+      "ClsId": "B022",
+      "ClsName": "奢侈品"
+    },
+    {
+      "ClsId": "B023",
+      "ClsName": "京东国际"
+    },
+    {
+      "ClsId": "B024",
+      "ClsName": "家具建材"
+    },
+    {
+      "ClsId": "B025",
+      "ClsName": "宠物园艺"
+    },
+    {
+      "ClsId": "B026",
+      "ClsName": "礼品鲜花"
+    },
+    {
+      "ClsId": "B027",
+      "ClsName": "拍拍二手"
+    },
+    {
+      "ClsId": "B028",
+      "ClsName": "生活充值"
+    },
+    {
+      "ClsId": "B029",
+      "ClsName": "拍卖"
+    },
+    {
+      "ClsId": "B030",
+      "ClsName": "房产"
+    }
+];
+var AdvertiseList = [
+  {
+  "AdId": "B001A001",
+  "ImgUrl": "../../../img/HandPick_FemaleCloth.png",
+  "AdTitle": "京东会员日",
+  "ClsId":"B001",
+  "BrandId":""
+},
+{
+  "AdId": "B001A002",
+  "ImgUrl": "../../../img/MotherDay.jpg",
+  "AdTitle": "母亲节",
+  "ClsId":"B001",
+  "BrandId":""
+},
+{
+  "AdId": "B001A003",
+  "ImgUrl": "../../../img/Pro.jpg",
+  "AdTitle": "坚果锤子手机",
+  "ClsId":"B001",
+  "BrandId":""
+},
+{
+  "AdId": "B002A001",
+  "ImgUrl": "../../../img/Pro.jpg",
+  "AdTitle": "坚果锤子手机",
+  "ClsId":"B002",
+  "BrandId":""
+}
+];
+/*促销*/
+var PromotionList=[
+{
+"PromotionId":"B001P001",
+"PromotionName":"以旧换新日",
+"SubTitle":"Apple享补贴",
+"ImgUrl":"../../../img/Cls/Apple享补贴.png",
+"ClsId":"B001",
+"BrandId":""
+},
+{
+"PromotionId":"B001P002",
+"PromotionName":"吃货嘉年华",
+"SubTitle":"抢99减88券",
+"ImgUrl":"../../../img/Cls/抢减八十八.png",
+"ClsId":"B001",
+"BrandId":""
+},
+{
+  "PromotionId":"B001P003",
+  "PromotionName":"男装国潮日",
+  "SubTitle":"满300减30",
+  "ImgUrl":"../../../img/Cls/满减三十.png",
+  "ClsId":"B001",
+  "BrandId":""
+  },
+  {
+    "PromotionId":"B001P004",
+    "PromotionName":"萌娃亲子节",
+    "SubTitle":"满400减200",
+    "ImgUrl":"../../../img/Cls/满减两百.png",
+    "ClsId":"B001",
+    "BrandId":""
+    }
+];
+
+var SmallClsList=
+[
+{
+"ClsId":"B001C001",
+"ClsName":"热门搜索",
+"ImgUrl":"",
+"ParentId":"B001",
+},
+{
+    "ClsId":"B001C001001",
+    "ClsName":"文胸",
+    "ImgUrl":"../../../img/Cls/文胸.png",
+    "ParentId":"B001C001"
+},
+{
+  "ClsId":"B001C001002",
+  "ClsName":"智能手表",
+  "ImgUrl":"../../../img/Cls/智能家居.png",
+  "ParentId":"B001C001"
+},
+{
+  "ClsId":"B001C001003",
+  "ClsName":"消毒棉片",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C001"
+},
+{
+  "ClsId":"B001C001004",
+  "ClsName":"烘培原料",
+  "ImgUrl":"../../../img/Cls/烘培原料.png",
+  "ParentId":"B001C001"
+},
+{
+  "ClsId":"B001C001005",
+  "ClsName":"儿童口罩",
+  "ImgUrl":"../../../img/Cls/儿童口罩.png",
+  "ParentId":"B001C001"
+},
+{
+  "ClsId":"B001C001006",
+  "ClsName":"男装",
+  "ImgUrl":"../../../img/Cls/男装.png",
+  "ParentId":"B001C001"
+},
+{
+  "ClsId":"B001C001007",
+  "ClsName":"无人机",
+  "ImgUrl":"../../../img/Cls/无人机.png",
+  "ParentId":"B001C001"
+},
+{
+  "ClsId":"B001C001008",
+  "ClsName":"卷纸",
+  "ImgUrl":"../../../img/Cls/卷纸.png",
+  "ParentId":"B001C001"
+},
+{
+  "ClsId":"B001C001009",
+  "ClsName":"洗手液",
+  "ImgUrl":"../../../img/Cls/洗手液.png",
+  "ParentId":"B001C001"
+},
+{
+  "ClsId":"B001C001010",
+  "ClsName":"成人奶粉",
+  "ImgUrl":"../../../img/Cls/成人奶粉.png",
+  "ParentId":"B001C001"
+},
+{
+  "ClsId":"B001C001011",
+  "ClsName":"打底裤袜",
+  "ImgUrl":"../../../img/Cls/打底裤袜.png",
+  "ParentId":"B001C001"
+},
+{
+  "ClsId":"B001C001012",
+  "ClsName":"智能家居",
+  "ImgUrl":"../../../img/Cls/智能家居.png",
+  "ParentId":"B001C001"
+},
+{
+  "ClsId":"B001C001013",
+  "ClsName":"拖把",
+  "ImgUrl":"../../../img/Cls/拖把.png",
+  "ParentId":"B001C001"
+},
+{
+  "ClsId":"B001C001014",
+  "ClsName":"牛奶",
+  "ImgUrl":"../../../img/Cls/牛奶.png",
+  "ParentId":"B001C001"
+},
+{
+  "ClsId":"B001C001015",
+  "ClsName":"T恤",
+  "ImgUrl":"../../../img/Cls/T恤.png",
+  "ParentId":"B001C001"
+},
+{
+  "ClsId":"B001C002",
+  "ClsName":"抗病毒专区",
+  "ImgUrl":"",
+  "ParentId":"B001"
+},
+{
+  "ClsId":"B001C002001",
+  "ClsName":"口罩",
+  "ImgUrl":"../../../img/Cls/口罩.png",
+  "ParentId":"B001C002"
+},
+{
+  "ClsId":"B001C002002",
+  "ClsName":"儿童口罩",
+  "ImgUrl":"../../../img/Cls/儿童口罩.png",
+  "ParentId":"B001C002"
+},
+{
+  "ClsId":"B001C002003",
+  "ClsName":"防病毒手套",
+  "ImgUrl":"../../../img/Cls/防病毒手套.png",
+  "ParentId":"B001C002"
+},
+{
+  "ClsId":"B001C002004",
+  "ClsName":"防病毒酒精",
+  "ImgUrl":"../../../img/Cls/防病毒酒精.png",
+  "ParentId":"B001C002"
+},
+{
+  "ClsId":"B001C002005",
+  "ClsName":"抑菌洗手液",
+  "ImgUrl":"../../../img/Cls/抑菌洗手液.png",
+  "ParentId":"B001C002"
+},
+{
+  "ClsId":"B001C002006",
+  "ClsName":"消毒棉片",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C002"
+},
+{
+  "ClsId":"B001C002007",
+  "ClsName":"防飞沫目镜",
+  "ImgUrl":"../../../img/Cls/防飞沫目镜.png",
+  "ParentId":"B001C002"
+},
+{
+  "ClsId":"B001C002008",
+  "ClsName":"体温自测",
+  "ImgUrl":"../../../img/Cls/体温自测.png",
+  "ParentId":"B001C002"
+},
+{
+  "ClsId":"B001C002009",
+  "ClsName":"宠物消毒",
+  "ImgUrl":"../../../img/Cls/宠物消毒.png",
+  "ParentId":"B001C002"
+},
+{
+  "ClsId":"B001C002010",
+  "ClsName":"果蔬生鲜",
+  "ImgUrl":"../../../img/Cls/果蔬生鲜.png",
+  "ParentId":"B001C002"
+},
+{
+  "ClsId":"B001C002011",
+  "ClsName":"必囤零食",
+  "ImgUrl":"../../../img/Cls/必囤零食.png",
+  "ParentId":"B001C002"
+},
+{
+  "ClsId":"B001C002012",
+  "ClsName":"居家囤粮",
+  "ImgUrl":"../../../img/Cls/居家囤粮.png",
+  "ParentId":"B001C002"
+},
+{
+  "ClsId":"B001C002013",
+  "ClsName":"防护家电",
+  "ImgUrl":"../../../img/Cls/防护家电.png",
+  "ParentId":"B001C002"
+},
+{
+  "ClsId":"B001C002014",
+  "ClsName":"宿舍清洁",
+  "ImgUrl":"../../../img/Cls/宿舍清洁.png",
+  "ParentId":"B001C002"
+},
+{
+  "ClsId":"B001C003",
+  "ClsName":"男士热搜",
+  "ImgUrl":"../../../img/Cls/男士热搜.png",
+  "ParentId":"B001"
+},
+{
+  "ClsId":"B001C003001",
+  "ClsName":"短袖T恤",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C003"
+},{
+  "ClsId":"B001C003002",
+  "ClsName":"外套",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C003"
+},{
+  "ClsId":"B001C003003",
+  "ClsName":"卫衣",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C003"
+},{
+  "ClsId":"B001C003004",
+  "ClsName":"牛仔裤",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C003"
+},{
+  "ClsId":"B001C003005",
+  "ClsName":"休闲裤",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C003"
+},{
+  "ClsId":"B001C003006",
+  "ClsName":"皮带",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C003"
+},{
+  "ClsId":"B001C003007",
+  "ClsName":"男士袜子",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C003"
+},{
+  "ClsId":"B001C003008",
+  "ClsName":"棒球帽",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C003"
+},{
+  "ClsId":"B001C003009",
+  "ClsName":"太阳镜",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C003"
+},{
+  "ClsId":"B001C003010",
+  "ClsName":"皮鞋",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C003"
+},{
+  "ClsId":"B001C003011",
+  "ClsName":"打火机",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C003"
+},{
+  "ClsId":"B001C003012",
+  "ClsName":"钱包",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C003"
+},{
+  "ClsId":"B001C004",
+  "ClsName":"女士热搜",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001"
+},{
+  "ClsId":"B001C004001",
+  "ClsName":"连衣裙",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C004"
+},{
+  "ClsId":"B001C004002",
+  "ClsName":"T恤",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C004"
+},{
+  "ClsId":"B001C004003",
+  "ClsName":"衬衫",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C004"
+},{
+  "ClsId":"B001C004004",
+  "ClsName":"裤装",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C004"
+},{
+  "ClsId":"B001C004005",
+  "ClsName":"短外套女",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C004"
+},{
+  "ClsId":"B001C004006",
+  "ClsName":"女士内裤",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C004"
+},{
+  "ClsId":"B001C004007",
+  "ClsName":"口红",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C004"
+},{
+  "ClsId":"B001C004008",
+  "ClsName":"香水",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C004"
+},{
+  "ClsId":"B001C004009",
+  "ClsName":"文胸",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C004"
+},{
+  "ClsId":"B001C004010",
+  "ClsName":"时尚饰品",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C004"
+},{
+  "ClsId":"B001C004011",
+  "ClsName":"护肤套装",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C004"
+},{
+  "ClsId":"B001C004012",
+  "ClsName":"高跟鞋",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C004"
+},{
+  "ClsId":"B001C005",
+  "ClsName":"生活热搜",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001"
+},{
+  "ClsId":"B001C005001",
+  "ClsName":"床",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C005"
+},{
+  "ClsId":"B001C005002",
+  "ClsName":"被子",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C005"
+},{
+  "ClsId":"B001C005003",
+  "ClsName":"沙发",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C005"
+},{
+  "ClsId":"B001C005004",
+  "ClsName":"茶具",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C005"
+},{
+  "ClsId":"B001C005005",
+  "ClsName":"儿童玩具",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C005"
+},{
+  "ClsId":"B001C005006",
+  "ClsName":"耳机",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C005"
+},{
+  "ClsId":"B001C005007",
+  "ClsName":"汽车用品",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C005"
+},{
+  "ClsId":"B001C005008",
+  "ClsName":"洗衣液",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C005"
+},{
+  "ClsId":"B001C005009",
+  "ClsName":"充电宝",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C005"
+},{
+  "ClsId":"B001C005010",
+  "ClsName":"储物家具",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C005"
+},{
+  "ClsId":"B001C005011",
+  "ClsName":"十字绣",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C005"
+},{
+  "ClsId":"B001C005012",
+  "ClsName":"山地车",
+  "ImgUrl":"../../../img/Cls/消毒棉片.png",
+  "ParentId":"B001C005"
+}
+
+,{
+  "ClsId":"B002C001",
+  "ClsName":"进口食品",
+  "ImgUrl":"",
+  "ParentId":"B002",
+  },
+  {
+      "ClsId":"B002C001001",
+      "ClsName":"糖果/巧克力",
+      "ImgUrl":"../../../img/Cls/消毒棉片.png",
+      "ParentId":"B002C001"
+  },
+  {
+    "ClsId":"B002C001002",
+    "ClsName":"休闲零食",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C001"
+  },
+  {
+    "ClsId":"B002C001003",
+    "ClsName":"饼干蛋糕",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C001"
+  },
+  {
+    "ClsId":"B002C001004",
+    "ClsName":"水",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C001"
+  },
+  {
+    "ClsId":"B002C001005",
+    "ClsName":"饮料",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C001"
+  },
+  {
+    "ClsId":"B002C001006",
+    "ClsName":"咖啡豆/咖啡粉",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C001"
+  },
+  {
+    "ClsId":"B002C001007",
+    "ClsName":"方便食品",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C001"
+  },
+  {
+    "ClsId":"B002C001008",
+    "ClsName":"米面调味",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C001"
+  },
+  {
+    "ClsId":"B002C001009",
+    "ClsName":"油",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C001"
+  },
+  {
+    "ClsId":"B002C001010",
+    "ClsName":"冲调品",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C001"
+  },
+  {
+    "ClsId":"B002C001011",
+    "ClsName":"牛奶",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C001"
+  },
+  {
+    "ClsId":"B002C002",
+    "ClsName":"休闲食品",
+    "ImgUrl":"",
+    "ParentId":"B002"
+  },
+  {
+    "ClsId":"B002C002001",
+    "ClsName":"休闲零食",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C002"
+  },
+  {
+    "ClsId":"B002C002002",
+    "ClsName":"膨化食品",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C002"
+  },
+  {
+    "ClsId":"B002C002003",
+    "ClsName":"坚果炒货",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C002"
+  },
+  {
+    "ClsId":"B002C002004",
+    "ClsName":"肉干/熟食",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C002"
+  },
+  {
+    "ClsId":"B002C002005",
+    "ClsName":"糖果/巧克力",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C002"
+  },
+  {
+    "ClsId":"B002C002006",
+    "ClsName":"饼干蛋糕",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C002"
+  },
+  {
+    "ClsId":"B002C002007",
+    "ClsName":"中华老字号",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C002"
+  },
+  {
+    "ClsId":"B002C003",
+    "ClsName":"酒馆区",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002"
+  },
+  {
+    "ClsId":"B002C003001",
+    "ClsName":"调酒频道",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C003"
+  },{
+    "ClsId":"B002C004",
+    "ClsName":"探酒圈",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002"
+  },{
+    "ClsId":"B002C004001",
+    "ClsName":"配制酒",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C004"
+  },{
+    "ClsId":"B002C004002",
+    "ClsName":"起泡酒",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C004"
+  },{
+    "ClsId":"B002C004003",
+    "ClsName":"精酿啤酒",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C004"
+  },{
+    "ClsId":"B002C004004",
+    "ClsName":"小酒",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C004"
+  },{
+    "ClsId":"B002C004005",
+    "ClsName":"青梅酒",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C004"
+  },{
+    "ClsId":"B002C004006",
+    "ClsName":"蜂蜜酒",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C004"
+  },{
+    "ClsId":"B002C005",
+    "ClsName":"中外名酒",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002"
+  },{
+    "ClsId":"B002C005001",
+    "ClsName":"白酒",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C005"
+  },{
+    "ClsId":"B002C005002",
+    "ClsName":"洋酒",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C005"
+  },{
+    "ClsId":"B002C005003",
+    "ClsName":"葡萄酒",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C005"
+  },{
+    "ClsId":"B002C005004",
+    "ClsName":"啤酒",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C005"
+  },{
+    "ClsId":"B002C005005",
+    "ClsName":"黄酒/养生酒",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C005"
+  },{
+    "ClsId":"B002C005006",
+    "ClsName":"收藏酒/陈年老酒",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C005"
+  },{
+    "ClsId":"B002C006",
+    "ClsName":"水饮料",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002"
+  },{
+    "ClsId":"B002C006001",
+    "ClsName":"纯净水",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C006"
+  },{
+    "ClsId":"B002C006001",
+    "ClsName":"苏打水",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C006"
+  },{
+    "ClsId":"B002C006001",
+    "ClsName":"矿泉水",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C006"
+  },{
+    "ClsId":"B002C006001",
+    "ClsName":"母婴水",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C006"
+  },{
+    "ClsId":"B002C006001",
+    "ClsName":"气泡水",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C006"
+  },{
+    "ClsId":"B002C006001",
+    "ClsName":"碳酸饮料",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C006"
+  },{
+    "ClsId":"B002C006001",
+    "ClsName":"蛋白质饮料",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C006"
+  },{
+    "ClsId":"B002C006001",
+    "ClsName":"功能饮料",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C006"
+  },{
+    "ClsId":"B002C006001",
+    "ClsName":"果味饮料",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C006"
+  },{
+    "ClsId":"B002C006001",
+    "ClsName":"茶饮料",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C006"
+  },{
+    "ClsId":"B002C006001",
+    "ClsName":"即饮咖啡",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C006"
+  },{
+    "ClsId":"B002C007",
+    "ClsName":"茶饮冲调",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002"
+  },{
+    "ClsId":"B002C007001",
+    "ClsName":"红茶",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C007"
+  },{
+    "ClsId":"B002C007002",
+    "ClsName":"绿茶",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C007"
+  },{
+    "ClsId":"B002C007003",
+    "ClsName":"普洱",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C007"
+  },{
+    "ClsId":"B002C007004",
+    "ClsName":"乌龙茶",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C007"
+  },{
+    "ClsId":"B002C007005",
+    "ClsName":"黑茶",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C007"
+  },{
+    "ClsId":"B002C007006",
+    "ClsName":"白茶",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C007"
+  },{
+    "ClsId":"B002C007007",
+    "ClsName":"龙井",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C007"
+  },{
+    "ClsId":"B002C007008",
+    "ClsName":"铁观音",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C007"
+  },{
+    "ClsId":"B002C007009",
+    "ClsName":"茶礼盒",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C007"
+  },{
+    "ClsId":"B002C007010",
+    "ClsName":"花草茶",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C007"
+  },{
+    "ClsId":"B002C007011",
+    "ClsName":"养生茶",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C007"
+  },{
+    "ClsId":"B002C007012",
+    "ClsName":"花果茶",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C007"
+  },{
+    "ClsId":"B002C007013",
+    "ClsName":"速溶咖啡",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C007"
+  },{
+    "ClsId":"B002C007014",
+    "ClsName":"咖啡豆/粉",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C007"
+  },{
+    "ClsId":"B002C007015",
+    "ClsName":"奶茶",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C007"
+  },{
+    "ClsId":"B002C007016",
+    "ClsName":"成人奶粉",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C007"
+  },{
+    "ClsId":"B002C007017",
+    "ClsName":"麦片谷物冲饮",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C007"
+  },{
+    "ClsId":"B002C007018",
+    "ClsName":"蜂蜜/蜂类制品",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C007"
+  },{
+    "ClsId":"B002C007019",
+    "ClsName":"代餐/谷粉",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C007"
+  },{
+    "ClsId":"B002C007020",
+    "ClsName":"牛奶酸奶",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C007"
+  },{
+    "ClsId":"B002C008",
+    "ClsName":"粮油调味",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002"
+  },{
+    "ClsId":"B002C008001",
+    "ClsName":"米",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C008"
+  },{
+    "ClsId":"B002C008002",
+    "ClsName":"面",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C008"
+  },{
+    "ClsId":"B002C008003",
+    "ClsName":"杂粮",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C008"
+  },{
+    "ClsId":"B002C008004",
+    "ClsName":"食用油",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C008"
+  },{
+    "ClsId":"B002C008005",
+    "ClsName":"调味品",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C008"
+  },{
+    "ClsId":"B002C008006",
+    "ClsName":"南北干货",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C008"
+  },{
+    "ClsId":"B002C008007",
+    "ClsName":"方便食品",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C008"
+  },{
+    "ClsId":"B002C008008",
+    "ClsName":"有机食品",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C008"
+  },{
+    "ClsId":"B002C008009",
+    "ClsName":"烘培原料",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C008"
+  },{
+    "ClsId":"B002C008010",
+    "ClsName":"调和油",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C008"
+  },{
+    "ClsId":"B002C008011",
+    "ClsName":"葵花籽油",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C008"
+  },{
+    "ClsId":"B002C008012",
+    "ClsName":"花生油",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C008"
+  },{
+    "ClsId":"B002C009",
+    "ClsName":"食品品牌",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002"
+  },{
+    "ClsId":"B002C009001",
+    "ClsName":"三只松鼠",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C009"
+  },{
+    "ClsId":"B002C009002",
+    "ClsName":"金龙鱼",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C009"
+  },{
+    "ClsId":"B002C009003",
+    "ClsName":"良品铺子",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C009"
+  },{
+    "ClsId":"B002C009004",
+    "ClsName":"福临门",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C009"
+  },{
+    "ClsId":"B002C009005",
+    "ClsName":"百草味",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C009"
+  },{
+    "ClsId":"B002C009006",
+    "ClsName":"德芙",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C009"
+  },{
+    "ClsId":"B002C009007",
+    "ClsName":"海天",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C009"
+  },{
+    "ClsId":"B002C009008",
+    "ClsName":"统一",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C009"
+  },{
+    "ClsId":"B002C009009",
+    "ClsName":"双汇",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C009"
+  },{
+    "ClsId":"B002C009010",
+    "ClsName":"老干妈",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C009"
+  },{
+    "ClsId":"B002C009011",
+    "ClsName":"达利园",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C009"
+  },{
+    "ClsId":"B002C009012",
+    "ClsName":"好想你",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C009"
+  },{
+    "ClsId":"B002C010",
+    "ClsName":"酒水品牌",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002"
+  },{
+    "ClsId":"B002C010001",
+    "ClsName":"蒙牛",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C010"
+  },{
+    "ClsId":"B002C010002",
+    "ClsName":"张一元",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C010"
+  },{
+    "ClsId":"B002C010003",
+    "ClsName":"伊利",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C010"
+  },{
+    "ClsId":"B002C010004",
+    "ClsName":"沃尔玛",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C010"
+  },{
+    "ClsId":"B002C010005",
+    "ClsName":"太平洋咖啡",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C010"
+  },{
+    "ClsId":"B002C010006",
+    "ClsName":"三元",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C010"
+  },{
+    "ClsId":"B002C010007",
+    "ClsName":"欧德堡",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C010"
+  },{
+    "ClsId":"B002C010008",
+    "ClsName":"峨嵋雪芽",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C010"
+  },{
+    "ClsId":"B002C010009",
+    "ClsName":"小罐茶",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C010"
+  },{
+    "ClsId":"B002C010010",
+    "ClsName":"安佳",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C010"
+  },{
+    "ClsId":"B002C010011",
+    "ClsName":"中茶",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C010"
+  },{
+    "ClsId":"B002C010012",
+    "ClsName":"天福茗茶",
+    "ImgUrl":"../../../img/Cls/消毒棉片.png",
+    "ParentId":"B002C010"
+  }
+];
+
+module.exports = {
+BigClsList: BigClsList,
+AdvertiseList: AdvertiseList,
+PromotionList: PromotionList,
+SmallClsList:SmallClsList
+};

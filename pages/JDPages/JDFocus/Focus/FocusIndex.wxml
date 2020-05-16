@@ -1,2 +1,51 @@
 <!--pages/JDPages/JDFocus/Focus/FocusIndex.wxml-->
-<text>pages/JDPages/JDFocus/Focus/FocusIndex.wxml</text>
+<!--pages/JDPages/JDCls/Cls/ClsIndex.wxml
+    header:card-header,thumbnail-caption-header,nav-header,list-item-header
+    装载元素的样式名，统称为*-container
+-->
+<view class="container" >
+  <view class="TopNavBar">
+  	<view id="TopFormControl" class="input-group">
+		<view class="form-control-group">
+			<input class="form-control" type="text" placeholder="衬衫男"></input>
+			<text class="jzIcon jzIcon-search"></text>
+		</view>
+	</view>
+		<view class="nav-content">
+			<view class="nav-tabs">
+				<block wx:for="{{BigClsList}}" wx:for-item="BigCls" wx:for-index="BigClsIndex">
+					<view class="nav-item {{SelectId==BigCls.ClsId?'active':''}}" data-id="{{BigCls.ClsId}}" 
+          bindtap="NavTabClick">{{BigCls.ClsName}}</view>
+				</block>
+			</view>
+		</view>
+  </view>
+
+	<view id="ClsContenter" class="card">
+		<view class="tab-content">
+			<view id="Goods" class="tab-panel" data-id="{{Cls.ClsId}}">
+				<view  class="thumbnail-group">
+					<block wx:for="{{GoodList}}" wx:for-item="Good">
+            <view class="thumbnail-container">
+            						<view class="thumbnail" data-id="{{Good.Id}}">
+							<view class="thumbnail-img">
+								<image src="{{Good.ImgUrl}}" mode="aspectFit"></image>
+							</view>
+							<view class="thumbnail-caption">
+                <view class="title-container">
+                    <text class="badge-ellipse {{(Good.GoodType!=''?'':'hidden')}}">{{Good.GoodType}}</text>
+                    <text class="caption" style="text-indent:{{Good.GoodType.length*13}}px">{{Good.Name}}</text>
+                </view>
+								<view class="price-container">
+                    <text class="price">{{Good.Price}}</text>
+                </view>
+							</view>
+						</view>
+            </view>
+					</block>
+				</view>
+
+			</view>
+		</view>
+	</view>
+</view>

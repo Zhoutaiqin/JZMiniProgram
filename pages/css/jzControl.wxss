@@ -8,6 +8,7 @@ view,
     box-sizing: inherit;/*width=padding+border+width*/
     /*overflow-x: hidden;*/
 }
+.caption,
 text{
     overflow: hidden;
     word-break: break-all;
@@ -82,7 +83,6 @@ text{
     height: 60rpx;
 
     color: #fff;
-    font-size: 24rpx;
 }
 /*椭圆*/
 .badge-ellipse{
@@ -98,7 +98,6 @@ text{
 
     background-color: #e66557;
     color: #fff;
-    font-size: 24rpx;
 }
 .badge-circle{
     display: flex;
@@ -125,13 +124,23 @@ text{
 
    margin-bottom: 27.15rpx;
 }
+.thumbnail-group>.thumbnail-container{
+    flex-basis:50%;
+    padding: 14.48rpx;
+}
 .thumbnail{
     display: flex;
     flex-direction: column;
     
-    border-radius: 5rpx;
+    border-radius: 8rpx;
     padding: 8rpx;
     margin-bottom: 27.15rpx;
+}
+.thumbnail-container>.thumbnail{
+    margin-bottom: 0;
+}
+.thumbnail.horizontal{
+    flex-direction: row;
 }
 .thumbnail-img{
     display: flex;
@@ -147,12 +156,16 @@ text{
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    padding: 8rpx;
     font-size: 26rpx;
 }
 .thumbnail-caption-header{
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    padding: 8rpx;
     font-size: 32.58rpx;
     color: #333333;
 }
@@ -160,6 +173,7 @@ text{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 8rpx;
     font-size: 26rpx;
 }
 .thumbnail>.thumbnail-img>image{
@@ -180,6 +194,7 @@ swiper{
 .carousel .thumbnail,
 .carousel .thumbnail-group{
     margin-bottom: 0;
+    padding: 0;
 }
 .badge-group-indicator{
     display: flex;
@@ -229,6 +244,9 @@ swiper{
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
 }
+.card.horizontal{
+    flex-direction: row;
+}
 .header{
     display: flex;
     flex-direction: row;
@@ -266,6 +284,9 @@ swiper{
     flex-direction: row;
     padding: 4.419rpx 8.839rpx;
 }
+.nav-tabs.vertical{
+    flex-direction: column;
+}
 .nav-item{
     display: flex;
     flex-direction: column;
@@ -279,6 +300,7 @@ swiper{
 }
 .nav-tabs>.nav-item{
      flex: 1;
+     white-space: nowrap;
 }
 .tab-panel{
     display: flex;
@@ -289,4 +311,21 @@ swiper{
 .header>.small{
     font-size: 80%;
     color: #999999;
+}
+.hidden{
+    display: none;
+}
+[class$='-container']{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    width: 100%;
+    position: relative;
+}
+.price{
+    color: #e93b3d;
+}
+.price::before{
+    content: '￥';
 }
