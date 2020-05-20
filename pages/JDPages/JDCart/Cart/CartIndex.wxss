@@ -1,1 +1,89 @@
 /* pages/JDPages/JDCart/Cart/CartIndex.wxss */
+@import '../../../css/jzIco.wxss';
+@import '../../../css/jzControl.wxss';
+.container{
+  padding: 0;
+  align-items: flex-start;
+  background-color: #f7f7f7;
+}
+#EmptyCart{
+   width: 100%;
+}
+#EmptyCart .thumbnail-img{
+   justify-content: center;
+}
+.card .body{
+   display: flex;
+   flex-direction: row;
+}
+.thumbnail-container{
+   flex-basis: 20%;
+}
+.thumbnail-img>image{
+   height: 150rpx;
+   width: 100%;
+}
+.text-container{
+   flex-basis: 80%;
+   display: flex;
+   flex-direction: column;
+}
+
+.title-container{
+   align-items: flex-start;
+}
+.title-container .badge-ellipse{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0 8rpx;
+}
+.title-container .caption{
+   -webkit-line-clamp: 2;
+}
+
+.price-container{
+   align-items: center;
+}
+.price-container .badge-ellipse{
+   border-radius: 0;
+   background-color: #ccc;
+   border: 1px solid #ccc;
+   color: #000;
+   width: 40rpx;
+   padding: 0;
+}
+.price-container .badge-ellipse.Disabled{
+   color: #ccc;
+   background-color: #ffffffff;
+}
+.form-control{
+    border-radius: 0;
+    border: 1px solid #ccc;
+    width: 60rpx;
+    padding: 0 15rpx;
+    height: 25rpx;
+    text-align: center;
+}
+.price{
+   margin-right:auto!important ;
+}
+
+#Settle{
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 0;
+
+   display: flex;
+   align-items: center;
+   padding: 16rpx 8rpx;
+
+   border-top: 1px solid #ccc;
+}
+#Settle>.price-container{
+   margin-right: auto!important;
+}
+#Settle>.badge-ellipse{
+   padding: 16rpx 32rpx;
+}

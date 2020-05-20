@@ -1,2 +1,71 @@
 <!--pages/JDPages/JDCart/Cart/CartIndex.wxml-->
-<text>pages/JDPages/JDCart/Cart/CartIndex.wxml</text>
+<view class="container">
+ <view id="EmptyCart" class="{{Stores.length>0?'hidden':''}}">
+      <view class="thumbnail">
+			    <view class="thumbnail-img">
+					    <image src="{{ErrorImg}}" mode="aspectFit"></image>
+					</view>
+					<view class="thumbnail-caption">
+					    <text>购物车空空如也，赶快去选购商品吧！</text>
+					</view>
+			</view>
+ </view>
+	<block wx:for="{{Stores}}" wx:for-item="Store" wx:for-index="StoreIndex">
+		<view class="card">
+			<view class="header">
+				  <text>{{Store.StoreName}}</text>
+			</view>
+			<block wx:for="{{Store.Goods}}" wx:for-item="Good" wx:for-index="GoodIndex">
+				<view class="body">
+				<view class="thumbnail-container">
+					<view class="thumbnail">
+						<view class="thumbnail-img">
+							<image src="{{Good.ImgUrl}}" mode="aspectFit"></image>
+						</view>
+					</view>				
+				</view>
+					<view class="text-container">
+						<view class="title-container">
+							<text class="badge-ellipse {{Good.Name!=''?'':'hidden'}}">JZ超市</text>
+							<text class="caption" style="text-indent:{{22*4+16}}rpx;">{{Good.Name}}</text>
+						</view>
+						<view class="prompt-container">
+							<text class="promote">{{Good.Promotion}}</text>
+						</view>
+						<view class="price-container">
+							<text class="price">{{Good.Price}}</text>
+							<view class="badge-group">
+								<text class="badge-ellipse {{Good.Num<=1?'Disabled':''}}" 
+								      data-type="-" 
+								      data-store-index="{{StoreIndex}}"
+											data-good-index="{{GoodIndex}}"
+											catchtap="BadgeClick">-</text>
+								<input class="form-control" value="{{Good.Num}}" 
+								       disabled="true"
+								       data-id="{{Good.Id}}" 
+											 data-store-index="{{StoreIndex}}"
+											 data-good-index="{{GoodIndex}}"
+											 type="number"></input>
+								<text class="badge-ellipse" 
+								      data-type="+" 
+											data-store-index="{{StoreIndex}}"
+											data-good-index="{{GoodIndex}}"
+											bindtap="BadgeClick">+</text>
+							</view>
+						</view>
+					</view>
+
+				</view>
+			</block>
+		</view>
+	</block>
+  <view id="Settle" class="f-md">
+	    <view class="price-container">
+			    <text>总计：</text>
+					<text class="price">{{TotalAmt}}</text>
+			</view>
+	    <view class="badge-ellipse" bindtap="Settle">去结算
+			     <text class="small">({{TotalNum}})</text>
+			</view>
+	</view>
+</view>

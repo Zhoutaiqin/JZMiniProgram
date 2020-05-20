@@ -5,7 +5,7 @@
   ImgUrl:类别图标
   EnglishName:英文名称
   商品
-  GoodType:0自营，1京东物流，2京东超市，3其他店铺
+  GoodType:0自营，1JZ物流，2JZ超市，3其他店铺
   不同商品，详情页面是不一样的
 */
 var BigClsList = [
@@ -115,7 +115,7 @@ var GoodList=
 "ImgUrl":"../../../img/Focus/戴森a.png",
 "ClsId":"B001",
 "BrandId":"",
-"GoodType":"京东超市",
+"GoodType":"JZ超市",
 "Price":5490,
 "Weight":"7.4kg"
 },
@@ -145,7 +145,7 @@ var GoodList=
       "ImgUrl":"../../../img/Focus/音响a.png",
       "ClsId":"B001",
       "BrandId":"",
-      "GoodType":"京东物流",
+      "GoodType":"JZ物流",
       "Price":780,
       "Weight":"10.97kg"
       },

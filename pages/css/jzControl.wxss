@@ -2,14 +2,18 @@
   width=100%表示容器的宽度与屏幕宽度一致
   所有类名小写，且用-连接；
   card(header/small,body);thumbnail(img,caption/caption-header/caption-footer)
+  header:上下级关系，大类小类/小类商品等
+  leader:介绍性关系，优惠/优惠内容
 */
+page{
+    font-size: 22rpx;/*以6为基准：32lg，26md，20sm*/
+}
 view,
 .carousel{
     box-sizing: inherit;/*width=padding+border+width*/
     /*overflow-x: hidden;*/
 }
-.caption,
-text{
+.caption{
     overflow: hidden;
     word-break: break-all;
     text-overflow: ellipsis;
@@ -44,7 +48,6 @@ text{
     height: 50rpx;
 
     border-radius: 25rpx; 
-    font-size: 24rpx;
  }
 
 /*徽章*/
@@ -53,7 +56,6 @@ text{
     flex-direction: row;
 
     width: 100%;
-    padding: 14.48rpx 27.15rpx;
     background-color: #de3c2c;
     margin-bottom: 7rpx;
 }
@@ -78,7 +80,6 @@ text{
     justify-content: center;
     align-items: center;
 
-    padding: 8rpx;
     width: 100rpx;
     height: 60rpx;
 
@@ -91,13 +92,13 @@ text{
     justify-content: center;
     align-items: center;
 
-    padding: 8rpx;
     width: auto;
     height: auto;
     border-radius: 40rpx;
-
+    flex-wrap: nowrap;
     background-color: #e66557;
     color: #fff;
+    white-space: nowrap;
 }
 .badge-circle{
     display: flex;
@@ -115,7 +116,11 @@ text{
 .img-ellipse{
     border-radius: 10rpx;
 }
-
+.img-circle{
+    width: 36.2rpx;
+    height: 36.2rpx;
+    border-radius: 36rpx;
+}
 /*图片组*/
 .thumbnail-group{
    display: flex;
@@ -126,14 +131,15 @@ text{
 }
 .thumbnail-group>.thumbnail-container{
     flex-basis:50%;
-    padding: 14.48rpx;
+    padding: 8rpx;
 }
 .thumbnail{
     display: flex;
     flex-direction: column;
     
     border-radius: 8rpx;
-    padding: 8rpx;
+    width: 100%;
+    height: inherit;
     margin-bottom: 27.15rpx;
 }
 .thumbnail-container>.thumbnail{
@@ -145,8 +151,6 @@ text{
 .thumbnail-img{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     width: inherit;
     height: inherit;
     overflow: hidden;
@@ -157,28 +161,18 @@ text{
     flex-direction: column;
     align-items: center;
 
-    padding: 8rpx;
-    font-size: 26rpx;
 }
 .thumbnail-caption-header{
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    padding: 8rpx;
-    font-size: 32.58rpx;
     color: #333333;
 }
 .thumbnail-caption-footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 8rpx;
-    font-size: 26rpx;
-}
-.thumbnail>.thumbnail-img>image{
-    width: 100%;
-    height: 100%;
 }
 swiper{
     width: 100%;
@@ -195,6 +189,10 @@ swiper{
 .carousel .thumbnail-group{
     margin-bottom: 0;
     padding: 0;
+}
+.carousel swiper swiper-item image{
+    width: 100%;
+    height: 100%;
 }
 .badge-group-indicator{
     display: flex;
@@ -236,7 +234,7 @@ swiper{
     flex-direction: column;
     
     width: 100%;
-    border-radius: 5rpx;
+    border-radius: 8rpx;
     background-color: #fff;
     margin-bottom: 27.15rpx;
     -webkit-box-shadow: 0 10.86rpx 21.72rpx rgba(0, 0, 0, 0.175);
@@ -246,16 +244,14 @@ swiper{
 }
 .card.horizontal{
     flex-direction: row;
+    flex-wrap: wrap;
 }
 .header{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     
-    font-size: 32.58rpx;
     color: #333333;
-    padding-top: 8rpx;
-    padding-bottom: 8rpx;
     margin-bottom: 7rpx;
 }
 .header>text:not(:last-child),
@@ -270,19 +266,27 @@ swiper{
     margin-bottom: 0;
 }
 /*链接项*/
+.text-group{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .Anchor-Item{
    display: flex;
    flex-direction: column;
 
    align-items: center;
 }
-.Anchor-Item text{
-    font-size: 12px;
+.text-group>.Anchor-Item{
+    flex: 1 auto;
+}
+.Anchor-Item>text+text{
+    margin-top: 8rpx;
 }
 .nav-tabs{
     display: flex;
     flex-direction: row;
-    padding: 4.419rpx 8.839rpx;
 }
 .nav-tabs.vertical{
     flex-direction: column;
@@ -293,29 +297,29 @@ swiper{
     justify-content: space-between;
     align-items: center;
 
-    font-size: 32.58rpx;
     color: #333333;
-    padding-top: 8rpx;
-    padding-bottom: 8rpx;
 }
 .nav-tabs>.nav-item{
      flex: 1;
      white-space: nowrap;
 }
+.nav-tabs>.nav-item.active{
+    font-weight: 700;
+}
 .tab-panel{
     display: flex;
     flex-direction: column;
 }
-.thumbnail-caption-header>.small,
-.nav-item>.small,
-.header>.small{
-    font-size: 80%;
-    color: #999999;
+.tab-content>.tab-panel{
+    display: none;
+}
+.tab-content>.tab-panel.active{
+    display: flex;
 }
 .hidden{
     display: none;
 }
-[class$='-container']{
+[class*='-container']{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -323,9 +327,100 @@ swiper{
     width: 100%;
     position: relative;
 }
+[class*='-container'].vertical{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .price{
     color: #e93b3d;
 }
 .price::before{
     content: '￥';
+}
+/*引导说明：一般是提示性文字*/
+.leader{
+    font-weight: 700;
+}
+/*文本/图片容器：用于区隔各个元素的间隔，避免使用元素的margin
+  若使用前后元素margin，易造成同一行各宽度不均匀
+  使用容器后，可使用容器的padding来区隔；或自身元素设置maring，与容器的间距都可；
+  诸如：具有某种业务的container，定方向
+*/
+
+.header-navbar,
+.footer-navbar{
+   display: flex;
+   flex-direction: row;
+
+   flex: 1 auto;
+
+   align-items: center;
+   position: fixed;
+   left: 0;
+   right: 0;
+   background-color: #fff;
+   z-index: 99;
+}
+.header-navbar{
+    top:0;
+}
+.footer-navbar{
+    bottom: 0;
+}
+/*字号
+ .f-lg大字号；f-md中字号；f-sl小字号
+*/
+.thumbnail-caption-header,
+.header,
+.f-lg{
+   font-size: 32rpx;   
+}
+.nav-item,
+.thumbnail-caption-footer,
+.f-md{
+    font-size: 26rpx;
+}
+.f-sm{
+    font-size: 20rpx;
+}
+.header>.leader>.small,
+.f-lg>.leader>.small,
+.f-md .small{
+    font-size: 80%;
+}
+.thumbnail-caption-header>.small,
+.header>.small,
+.f-lg>.small,
+.nav-item>.small,
+.thumbnail-caption-footer>.small,
+.f-md>.small{
+    font-size: 80%;
+    color: #999999;
+}
+/*容器间距：大容器上下8rpx;左右16rpx;小容器：4rpx*/
+.header-navbar,
+.footer-navbar,
+.nav-tabs,
+.card>.body,
+.header,
+.thumbnail-caption,
+.thumbnail-caption-header,
+.thumbnail-caption-footer{
+    padding: 8rpx 0;
+}
+/*上下间距用marin,以保证左右元素的顶端对齐；左右间距用padding*/
+.card{
+    padding: 16rpx;
+}
+.img-container,
+.text-container,
+.badge-ellipse{
+    padding: 0 16rpx;
+}
+.body>.caption:not(:first-child),
+.body>.thumbnail-group:not(:first-child),
+.thumbnail-caption>.title-container:not(:first-child),
+.thumbnail-caption>.price-container:not(:first-child){
+    margin-top: 8rpx;
 }

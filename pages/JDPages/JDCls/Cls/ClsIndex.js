@@ -13,7 +13,8 @@ Page({
       SmallClsList:[],
       indicatorDots:false,
       autoPlay:false,
-      SelectId:''
+      SelectId:'',
+      ErrorImg:"../../../img/ErrorImg.png"
   },
 
   /**
@@ -76,10 +77,18 @@ Page({
             SmallClsList:SmallClsList
         });*/
     }
+    var tempAdvertiseList=[];
+    if(AdvertiseList!=null && AdvertiseList.length>1){
+        tempAdvertiseList=tempAdvertiseList.concat(AdvertiseList);
+    }
+    var tempAdvertise=null;
+    if(AdvertiseList!=null && AdvertiseList.length==1){
+        tempAdvertise=AdvertiseList[0];
+    }
     this.setData({
         SelectId:bigClsId,
-        AdvertiseList:(AdvertiseList!=null && AdvertiseList.length>1)?AdvertiseList:[],
-        Advertise:(AdvertiseList!=null && AdvertiseList.length==1)?AdvertiseList[0]:null,
+        AdvertiseList:tempAdvertiseList,
+        Advertise:tempAdvertise,
         PromotionList:PromotionList,
         SmallClsList:SmallClsList,
         indicatorDots:false,

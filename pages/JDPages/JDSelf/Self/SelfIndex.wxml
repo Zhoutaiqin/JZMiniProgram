@@ -1,2 +1,72 @@
 <!--pages/JDPages/JDSelf/Self/SelfIndex.wxml-->
-<text>pages/JDPages/JDSelf/Self/SelfIndex.wxml</text>
+<view class="container">
+   <view id="Account" class="card horizontal">
+        <view class="img-container">
+              <image src="{{User.Photo}}" mode="aspectFit" class="img-circle"></image>
+        </view>
+        <view class="text-container">
+             <view class="nick-container">
+                 <text class="leader">昵称:</text>
+                 <text class="nick-name">{{User.NickName}}</text>
+             </view>
+             <view class="id-container">
+                  <text class="leader">用户名:</text>
+                  <text class="user-id">{{User.UserId}}</text>
+             </view>
+        </view>
+             <view class="set-container">
+                 <text class="jzIcon jzIcon-cog"></text>
+                 <text>账户设置</text>
+             </view>
+   </view>
+   <view id="Orders" class="card">
+        <view class="text-group">
+					<block wx:for="{{OrderFlows}}" wx:for-item="OFlow">
+						<view class="Anchor-Item" data-target="{{OFlow.Href}}">
+							<text class="jzIcon {{OFlow.Icon}}"></text>
+							<text>{{OFlow.FlowName}}</text>
+						</view>
+					</block>
+          <view class="Anchor-Item">
+             <text class="jzIcon jzIcon-list-alt"></text>
+             <text>全部订单</text>
+          </view>
+        </view>
+   </view>
+
+   <view id="Asset" class="card">
+       <view class="text-group">
+					<block wx:for="{{Assets}}" wx:for-item="Asset">
+						<view class="Anchor-Item" data-target="{{Asset.Href}}">
+							<text>{{Asset.Value}}</text>
+							<text>{{Asset.Name}}</text>
+						</view>
+					</block>
+          <view class="Anchor-Item">
+             <text class="jzIcon jzIcon-tag"></text>
+             <text>我的资产</text>
+          </view>
+        </view>       
+   </view>
+
+   <view id="Favorite" class="card">
+       <view class="text-group">
+					<block wx:for="{{Favorites}}" wx:for-item="Favorite">
+						<view class="Anchor-Item">
+							<text>{{Favorite.Value}}</text>
+							<text>{{Favorite.Name}}</text>
+						</view>
+					</block>
+        </view>    
+   </view>
+   <view id="Others" class="card">
+          <view class="text-group">
+					<block wx:for="{{Others}}" wx:for-item="Other">
+						<view class="Anchor-Item">
+							<text class="jzIcon {{Other.Icon}}"></text>
+							<text>{{Other.Name}}</text>
+						</view>
+					</block>
+        </view>  
+   </view>
+</view>

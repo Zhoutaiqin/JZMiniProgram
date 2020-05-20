@@ -9,7 +9,8 @@ Page({
       BigClsList:[],
       GoodList:[],
       SelectId:'',
-      TopNavBar:''
+      TopNavBar:'',
+      ErrorImg:"../../../img/ErrorImg.png"
   },
 
   /**
@@ -52,7 +53,14 @@ Page({
           SelectId:bigClsId
        });
   },
-
+  OpenGoodDetail:function(e){
+      var obj=e.currentTarget;
+      var goodId=obj.dataset.id;
+      console.log(goodId);
+      wx.navigateTo({
+        url: '../../JZDetails/Details/GoodDetail?id='+goodId,
+      })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

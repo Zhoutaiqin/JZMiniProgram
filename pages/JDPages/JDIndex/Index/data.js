@@ -23,7 +23,7 @@ var HotSearchs = [{
 var AdPromotions = [{
     "AdId": "",
     "ImgUrl": "../../../img/HandPick_FemaleCloth.png",
-    "AdTitle": "京东会员日"
+    "AdTitle": "JZ会员日"
   },
   {
     "AdId": "",
@@ -40,19 +40,19 @@ var AdPromotions = [{
 var BigClsList = [{
     "BigClsTens": [{
         "Icon": "jzIcon-shopping-cart",
-        "Title": "京东超市"
+        "Title": "JZ超市"
       },
       {
         "Icon": "jzIcon-appliance",
-        "Title": "京东家电"
+        "Title": "JZ家电"
       },
       {
         "Icon": "jzIcon-scale",
-        "Title": "京东服饰"
+        "Title": "JZ服饰"
       },
       {
         "Icon": "jzIcon-phone",
-        "Title": "京东手机"
+        "Title": "JZ手机"
       },
       {
         "Icon": "jzIcon-shopping",
@@ -60,7 +60,7 @@ var BigClsList = [{
       },
       {
         "Icon": "jzIcon-fresh",
-        "Title": "京东生鲜"
+        "Title": "JZ生鲜"
       },
       {
         "Icon": "jzIcon-beans",
@@ -76,18 +76,18 @@ var BigClsList = [{
       },
       {
         "Icon": "jzIcon-seckill",
-        "Title": "京东秒杀"
+        "Title": "JZ秒杀"
       }
     ]
   },
   {
     "BigClsTens": [{
         "Icon": "jzIcon-globe",
-        "Title": "京东国际"
+        "Title": "JZ国际"
       },
       {
         "Icon": "jzIcon-auction",
-        "Title": "京东拍卖"
+        "Title": "JZ拍卖"
       },
       {
         "Icon": "jzIcon-second",
@@ -103,7 +103,7 @@ var BigClsList = [{
       },
       {
         "Icon": "jzIcon-health",
-        "Title": "京东健康"
+        "Title": "JZ健康"
       },
       {
         "Icon": "jzIcon-recharge",
@@ -115,7 +115,7 @@ var BigClsList = [{
       },
       {
         "Icon": "jzIcon-home",
-        "Title": "京东到家"
+        "Title": "JZ到家"
       },
       {
         "Icon": "jzIcon-th-large",
@@ -240,7 +240,7 @@ var HandPick={
   "Cls":[
     {
       "ClsId":"",
-      "ClsName":"京东手机",
+      "ClsName":"JZ手机",
       "SubTitle":"稀缺新机购",
       "Goods":{
         "GoodId":"",
@@ -251,7 +251,7 @@ var HandPick={
     }
   },{
     "ClsId":"",
-    "ClsName":"京东家电",
+    "ClsName":"JZ家电",
     "SubTitle":"30天保价",
     "Goods":{
       "GoodId":"",
@@ -287,7 +287,7 @@ var HandPick={
 };
 var JDSelf={
   "Id":"",
-  "Title":"东家小院",
+  "Title":"JZ小院",
   "Cls":[
     {
       "ClsId":"",
@@ -341,7 +341,7 @@ var GoodClsNavs=[
     {
       "ClsId":"Internation",
       "ClsName":"海购",
-      "SubTitle":"京东国际",
+      "SubTitle":"JZ国际",
       "Target":"Internation"
     },
     {
@@ -374,7 +374,7 @@ var Goods=[
   },  {
     "GoodId":"",
     "GoodName":"蓝帅魔力橙加厚洗车套双面毛绒擦车洗车清洗手套车用",
-    "GoodImg":"../../../img/清洗手套.png",
+    "GoodImg":"",
     "OldPrice":12.5,
     "NewPrice":29.6,
     "ParentId":"Sift",
@@ -397,7 +397,7 @@ var Goods=[
     "OldPrice":29.6,
     "NewPrice":29.6,
     "ParentId":"Self",
-    "logistics":"京东",
+    "logistics":"JZ",
     "Prompt":""
   }, {
     "GoodId":"",
@@ -406,16 +406,16 @@ var Goods=[
     "OldPrice":197.8,
     "NewPrice":197.8,
     "ParentId":"Self",
-    "logistics":"京东",
+    "logistics":"JZ",
     "Prompt":""
   },  {
     "GoodId":"",
     "GoodName":"蓝帅魔力橙加厚洗车套双面毛绒擦车洗车清洗手套车用",
-    "GoodImg":"../../../img/清洗手套.png",
+    "GoodImg":"",
     "OldPrice":12.5,
     "NewPrice":29.6,
     "ParentId":"Self",
-    "logistics":"京东",
+    "logistics":"JZ",
     "Prompt":""
   },  {
     "GoodId":"",
@@ -424,7 +424,7 @@ var Goods=[
     "OldPrice":29.6,
     "NewPrice":17.9,
     "ParentId":"Self",
-    "logistics":"京东",
+    "logistics":"JZ",
     "Prompt":""
   }],
   [{
@@ -448,7 +448,7 @@ var Goods=[
   },  {
     "GoodId":"",
     "GoodName":"蓝帅魔力橙加厚洗车套双面毛绒擦车洗车清洗手套车用",
-    "GoodImg":"../../../img/清洗手套.png",
+    "GoodImg":"",
     "OldPrice":12.5,
     "NewPrice":29.6,
     "ParentId":"Internation",
@@ -485,7 +485,7 @@ var Goods=[
   },  {
     "GoodId":"",
     "GoodName":"蓝帅魔力橙加厚洗车套双面毛绒擦车洗车清洗手套车用",
-    "GoodImg":"../../../img/清洗手套.png",
+    "GoodImg":"",
     "OldPrice":12.5,
     "NewPrice":29.6,
     "ParentId":"SpecPrice",

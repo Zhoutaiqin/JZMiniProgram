@@ -67,22 +67,22 @@
   margin-bottom: 0;
   margin-top: 165rpx;
 }
-#Goods .thumbnail-group,
 #Goods .thumbnail-container{
-  padding: 7rpx;
+  padding: 6rpx;
 }
 #Goods .thumbnail-group .thumbnail{
   background-color: #fff;
 }
 #Goods .thumbnail-group .thumbnail>.thumbnail-img>image{
      height: 280rpx;
+     width: 100%;
 }
 #Goods .thumbnail-group .thumbnail>.thumbnail-caption .title-container .badge-ellipse{
   position: absolute;
   top: 0;
   left: 0;
-  padding: 0;
-  border-radius: 2rpx;
+  padding: 0 8rpx;
+  border-radius: 5rpx;
 }
 #Goods .thumbnail-group .thumbnail-caption .title-container .caption{
   -webkit-line-clamp: 2;

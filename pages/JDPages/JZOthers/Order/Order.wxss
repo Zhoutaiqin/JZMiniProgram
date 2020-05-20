@@ -1,0 +1,23 @@
+/* pages/JDPages/JZOthers/Order/Order.wxss */
+@import "../../../css/jzIco.wxss";
+@import "../../../css/jzControl.wxss";
+
+.title-container,
+.content-container{
+   padding: 8rpx;
+   border-top: 1px solid #ccc;
+}
+.title-container>.num,
+.content-container>.num{
+   flex-basis: 10%;
+}
+
+.title-container>.name,
+.content-container>.name{
+    flex-basis: 80%;
+}
+
+.title-container>.operate,
+.content-container>.operate{
+    flex-basis: 10%;
+}

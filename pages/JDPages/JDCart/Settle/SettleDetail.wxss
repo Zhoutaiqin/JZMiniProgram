@@ -1,0 +1,84 @@
+/* pages/JDPages/JDCart/Settle/SettleDetail.wxss */
+/* pages/JDPages/JDCart/Cart/CartIndex.wxss */
+@import '../../../css/jzIco.wxss';
+@import '../../../css/jzControl.wxss';
+.container{
+  padding: 0;
+  align-items: flex-start;
+  background-color: #f7f7f7;
+}
+#User .title-container{
+   font-size: 24rpx;
+   font-weight: 700;
+   margin-bottom: 16rpx;
+}
+.card .body{
+   display: flex;
+   flex-direction: row;
+}
+#good .card>.body>.thumbnail-container{
+   flex-basis: 20%;
+}
+#good .thumbnail-container .thumbnail-img>image{
+   height: 100rpx;
+   width: 100%;
+}
+#good .card>.body>.text-container{
+   flex-basis: 80%;
+   display: flex;
+   flex-direction: column;
+}
+#good .card>.body>.text-container>.title-container .badge-ellipse{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0 8rpx;
+}
+#good .card>.body>.text-container>.prompt-container,
+#good .card>.body>.text-container>.price-container{
+   margin-top: 8rpx;
+}
+.card>.body .leader,
+#good .card>.body .price-container .price{
+   margin-right:auto!important;
+}
+.card>.body .leader{
+   font-weight: 400;
+}
+.card>.body .leader+text{
+   font-size: 20rpx;
+}
+#good .form-control{
+   padding: 0;
+   width: auto;
+   height: initial;
+   border-radius: 0;
+   text-align: right;
+}
+#good .logistic-container{
+   flex-direction: column;
+}
+#good .time-container,
+#personTicket.card>.body .leader+text{
+   color: #999999;
+}
+#Pay{
+   position: fixed;
+   left: 0;
+   right: 0;
+   bottom: 0;
+
+   display: flex;
+   align-items: center;
+   padding: 16rpx 8rpx;
+
+   border-top: 1px solid #ccc;
+}
+#Pay>.price-container{
+   margin-right: auto!important;
+}
+#Pay>.badge-ellipse{
+   border-radius: 0;
+   padding: 16rpx;
+   background-color: #85da46;
+}

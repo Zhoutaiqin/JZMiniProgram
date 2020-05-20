@@ -1,0 +1,15 @@
+<!--pages/JDPages/JZOthers/Order/Order.wxml-->
+<view class="container">
+    <view class="title-container">
+        <text class="num">序号</text>
+        <text class="name">物品名称</text>
+        <text class="operate"></text>
+    </view>
+    <block wx:for="{{Goods}}" wx:for-item="Good" wx:for-index="No">
+        <view class="content-container">
+            <text class="num">{{No+1}}</text>
+            <text class="name">{{Good.Name}}</text>
+            <text class="operate" bindtap="FindBack">找回</text>
+        </view>
+    </block>
+</view>

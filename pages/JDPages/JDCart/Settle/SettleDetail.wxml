@@ -1,0 +1,106 @@
+<!--pages/JDPages/JDCart/Settle/SettleDetail.wxml-->
+<view class="container">
+  <view id="User" class="card">
+     <view  class="title-container">
+        <text>{{User.UserName}}</text>
+        <text>{{User.Telephone}}</text>
+     </view>
+     <view class="address-container">
+        <text>{{User.Address}}</text>
+     </view>
+  </view>
+  <view id="good">
+ 	<block wx:for="{{Stores}}" wx:for-item="Store" wx:for-index="StoreIndex">
+		<view class="card">
+			<view class="header">
+				  <text>{{Store.StoreName}}</text>
+			</view>
+			<block wx:for="{{Store.Goods}}" wx:for-item="Good" wx:for-index="GoodIndex">
+				<view class="body">
+				<view class="thumbnail-container">
+					<view class="thumbnail">
+						<view class="thumbnail-img">
+							<image src="{{Good.ImgUrl}}" mode="aspectFit"></image>
+						</view>
+					</view>				
+				</view>
+					<view class="text-container">
+						<view class="title-container">
+							<text class="badge-ellipse {{Good.Name!=''?'':'hidden'}}">JZ超市</text>
+							<text class="caption" style="text-indent:{{22*4+16}}rpx;">{{Good.Name}}</text>
+						</view>
+						<view class="prompt-container">
+							<text class="promote">{{Good.Promotion}}</text>
+						</view>
+						<view class="price-container">
+							<text class="price">{{Good.Price}}</text>
+              <text class="num">{{Good.Num}}</text>
+						</view>
+					</view>
+
+				</view>
+			</block>
+        <view class="body">
+          <view class="logistic-container">
+              <view class="delivery-container">
+                 <text class="leader">配送服务</text>
+                 <text class="f-sm">快递运输</text>
+              </view>
+              <view class="time-container">
+                 <text class="leader">中小件送货时间</text>
+                 <text class="f-sm">5月20日 周三 09:00-21:00</text>
+              </view>
+            </view>
+        </view>
+        <view class="body">
+           <text class="leader">备注</text>
+           <input class="form-control" placeholder="选填，给商家留言"></input>
+        </view>
+		</view>
+	</block> 
+  </view>
+
+  <view id="personTicket" class="card">
+      <view class="body">
+          <text class="leader">发票</text>
+          <text>普票(商品明细-个人)</text>
+      </view>
+      <view class="body">
+          <text class="leader">优惠券</text>
+          <text>无可用</text>
+      </view>
+      <view class="body">
+          <text class="leader">礼品卡</text>
+          <text>无可用</text>
+      </view>
+      <view class="body">
+           <text class="leader">红包</text>
+           <text>无可用</text>
+      </view>
+      <view class="body">
+           <text class="leader">JZ豆</text>
+           <text>无可用</text>
+      </view>
+  </view>
+  <view class="card">
+      <view class="body">
+          <text class="leader">商品金额</text>
+          <text class="price">{{TotalAmt}}</text>
+      </view>
+      <view class="body">
+          <text class="leader">运费</text>
+          <text class="price">{{DeliveryAmt}}</text>
+      </view>
+      <view class="body">
+          <text class="leader">实付金额</text>
+          <text class="price">{{ActualAmt}}</text>
+      </view>
+  </view>
+  <view id="Pay" class="f-md">
+	    <view class="price-container">
+			    <text class="leader">实付金额：</text>
+					<text class="price">{{ActualAmt}}</text>
+			</view>
+      <text class="badge-ellipse" bindtap="Settle">微信支付</text>
+	</view>
+</view>

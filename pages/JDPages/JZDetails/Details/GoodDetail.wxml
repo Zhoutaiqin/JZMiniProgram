@@ -1,0 +1,193 @@
+<!--pages/JDPages/JZDetails/Details/GoodDetail.wxml
+    轮播图：指标在原有基础上可自定义，原有指标可隐藏
+    基础布局：肯定会有的；扩展布局：即每种行业特性产生的特有布局，根据数据是否有，来确定是否显示
+-->
+<view class="container">
+	<view id="goodImg" class="carousel">
+		<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoPlay}}" 
+            interval="50000" duration="500" bindchange="ChangeImg">
+			<block wx:for="{{Good.GoodImgs}}" wx:for-item="GoodImg">
+				<swiper-item>
+					<view class="thumbnail">
+           <view class="thumbnail-img">
+           <image src="{{GoodImg.ImgUrl}}" mode="aspectFit"></image>
+           </view>
+					</view>
+				</swiper-item>
+			</block>
+		</swiper>
+    <text class="badge-ellipse">{{SelectIndex}}/{{Good.GoodImgs.length}}</text>
+	</view>
+	<!--颜色板块：衣服有，可推广到html，根据是否有数据，进行设置是否隐藏；这样可布局多种架构-->
+	<view class="{{(Good.Colors!=null && Good.Colors.length>0)?'':'hidden'}}"></view>
+
+	<view class="card">
+		<view id="PriceArea" class="price-container">
+			<text class="price">{{Good.Price}}</text>
+			<view class="Anchor-Item">
+				<text class="badge-circle">￥</text>
+				<text>降价提醒</text>
+			</view>
+			<view class="Anchor-Item">
+				<text class="jzIcon jzIcon-heart"></text>
+        <text>收藏</text>
+			</view>
+		</view>
+		<!--可能有多种说明组成的标题：如店铺名称，物流，促销，商品名称等，商品名称只是其中一小部分-->
+		<view id="TitleArea" class="title-container">
+			<text class="caption">{{Good.Name}}</text>
+		</view>
+
+		<view class="small">
+			<text>{{Good.Memo}}</text>
+		</view>
+	</view>
+	<!--促销区：leader+内容，左右放置-->
+	<view id="Promotion" class="card horizontal {{(Good.Promotions!=null && Good.Promotions.length>0)?'':'hidden'}}">
+		<text class="leader">优惠</text>
+		<view class="contenter">
+			<block wx:for="{{Good.Promotions}}" wx:for-item="Promotion">
+				<view class="Anchor-Item">
+					<view class="title-container">
+              <text class="badge-ellipse">{{Promotion.Title}}</text>
+              <text class="caption">{{Promotion.FullTitle}}</text>
+          </view>
+					<text class="small">{{Promotion.SubTitle}}</text>
+				</view>
+			</block>
+		</view>
+		<text class="jzIcon jzIcon-option-horizontal"></text>
+	</view>
+	
+	<view id="goodSundry" class="card">
+       <!--商品选择区:不同的商品属性不一样，调用不同的展示区页面；返回的数据就一条-->
+        <view id="Select" class="body">
+		<text class="leader">已选</text>
+		<view class="contenter">
+			<view class="Anchor-Item">
+				<text class="caption">{{Good.SelectObj.Title}}</text>
+				<text class="small">{{Good.Memo}}</text>
+			</view>
+		</view>
+		<text class="jzIcon jzIcon-option-horizontal"></text>
+	</view>
+	<!--地址选择区-->
+	<view id="Address" class="body">
+		<text class="leader">送至</text>
+		<view class="contenter">
+			<view class="Anchor-Item">
+				<text class="caption">{{User.Address}}</text>
+				<!--<text class="small">{{Loginstic.Memo}}</text>-->
+			</view>
+		</view>
+		<text class="jzIcon jzIcon-option-horizontal"></text>
+	</view>
+
+	<!--重量选择区-->
+	<view class="body">
+		<text class="leader">重量</text>
+		<text class="caption">{{Good.Weight}}</text>
+	</view>
+
+	<!--服务说明-->
+	<view id="Services" class="body">
+       <view class="contenter">
+       		<block wx:for="{{Good.Services}}" wx:for-item="Service">
+			<view class="text-container">
+                <text class="jzIcon jzIcon-ok-circle"></text>
+                <text>{{Service.Title}}</text>
+            </view> 
+		    </block>
+       </view>
+       <text class="jzIcon jzIcon-option-horizontal"></text>
+	</view>
+    </view>
+
+
+  <!--评价区-->
+  <view id="EvaluateArea" class="card">
+     <view class="header">
+         <view class="leader">
+            <text>评价</text>
+            <text class="small">{{Good.EvaluateNum}}条</text>
+         </view>
+         <text class="small">好评度{{Good.EvaluateRate}}</text>
+     </view>
+        <block wx:for="{{Good.EvaluateList}}" wx:for-item="Evaluate">
+            <view class="body">
+                <view class="header">
+                     <image class="img-circle" src="{{Evaluate.UserPhoto}}"></image>
+                     <text>{{Evaluate.UserName}}</text>
+                     <text>{{Evaluate.Star}}</text>
+                     <text class="ETime">{{Evaluate.ETime}}</text>
+                </view>
+                <text class="caption">{{Evaluate.Content}}</text>
+                <view class="thumbnail-group">
+                   <block wx:for="{{Evaluate.EDetails}}" wx:for-item="EDetail">
+                        <view class="thumbnail">
+                            <view class="thumbnail-img">
+                               <image src="{{EDetail.ImgUrl}}" mode="aspectFit"></image>
+                            </view>
+                        </view>
+                   </block>
+                </view>
+            </view>
+        </block>        
+  </view>
+
+  <!--商品详情-->
+  <view class="card">
+       <view class="nav-tabs">
+            <view class="nav-item {{CurrentId=='ItemIntroduction'?'active':''}}" data-target="ItemIntroduction" bindtap="NavTabClick">商品介绍</view>
+            <view class="nav-item {{CurrentId=='Specification'?'active':''}}" data-target="Specification" bindtap="NavTabClick">规格参数</view>
+            <view class="nav-item {{CurrentId=='AfterSale'?'active':''}}" data-target="AfterSale" bindtap="NavTabClick">售后保障</view>
+       </view>
+       <view class="tab-content">
+            <view class="tab-panel {{CurrentId=='ItemIntroduction'?'active':''}}">
+                <block wx:for="{{Good.Introduction}}" wx:for-item="Introduction">
+                    <view class="thumbnail">
+                        <view class="thumbnail-img">
+                             <image src="{{Introduction.ImgUrl}}" mode="aspectFit"></image>
+                        </view>
+                    </view>
+                </block>
+            </view>
+            <!--可能会做成一个模板放置进来-->
+            <view class="tab-panel {{CurrentId=='Specification'?'active':''}}">
+                 <image src="{{Good.Specification}}"></image>
+            </view>
+            <view id="AfterSale" class="tab-panel {{CurrentId=='AfterSale'?'active':''}}">
+                <block wx:for="{{AfterSale}}">
+                     <view class="card">
+                        <view class="header">{{item.Title}}</view>
+                        <view class="body">
+                        <pre>{{item.Content}}</pre>
+                        </view>
+                     </view>
+                </block>
+            </view>
+       </view>
+  </view>
+
+  <view id="footer" class="footer-navbar">
+      <view class="text-container vertical">
+          <text class="jzIcon jzIcon-headphones"></text>
+          <text>客服</text>
+      </view>
+      <view class="text-container vertical">
+          <text class="jzIcon jzIcon-headphones"></text>
+          <text>店铺</text>
+      </view>
+      <view class="text-container vertical" bindtap="OpenCart">
+          <text class="jzIcon jzIcon-shopping-cart"></text>
+          <text>购物车</text>
+          <text id="CartNum" class="badge-circle {{CartNum>0?'':'hidden'}}">{{CartNum}}</text>
+      </view>
+      <view class="text-container f-md" bindtap="AddCart">
+          <text class="badge-ellipse">加入购物车</text>
+      </view>
+      <view class="text-container f-md" data-id="{{Good.Id}}" bindtap="Settle">
+          <text class="badge-ellipse">立即购买</text>
+      </view>   
+  </view>
+</view>

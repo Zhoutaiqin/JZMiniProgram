@@ -23,18 +23,18 @@
 
 	<view id="ClsContenter" class="card">
 		<view class="tab-content">
-			<view id="Goods" class="tab-panel" data-id="{{Cls.ClsId}}">
+			<view id="Goods" class="tab-panel active" data-id="{{Cls.ClsId}}">
 				<view  class="thumbnail-group">
 					<block wx:for="{{GoodList}}" wx:for-item="Good">
             <view class="thumbnail-container">
-            						<view class="thumbnail" data-id="{{Good.Id}}">
+            						<view class="thumbnail" data-id="{{Good.Id}}" bindtap="OpenGoodDetail">
 							<view class="thumbnail-img">
-								<image src="{{Good.ImgUrl}}" mode="aspectFit"></image>
+								<image src="{{Good.ImgUrl==''?ErrorImg:Good.ImgUrl}}" mode="aspectFit"></image>
 							</view>
 							<view class="thumbnail-caption">
                 <view class="title-container">
                     <text class="badge-ellipse {{(Good.GoodType!=''?'':'hidden')}}">{{Good.GoodType}}</text>
-                    <text class="caption" style="text-indent:{{Good.GoodType.length*13}}px">{{Good.Name}}</text>
+                    <text class="caption" style="text-indent:{{Good.GoodType.length*22+16}}rpx">{{Good.Name}}</text>
                 </view>
 								<view class="price-container">
                     <text class="price">{{Good.Price}}</text>

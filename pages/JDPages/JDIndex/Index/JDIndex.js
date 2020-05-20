@@ -26,7 +26,8 @@ Page({
     CurrentId:"",
     AdPromoteIndex:0,
     BigClsIndex:0,
-    src:""
+    src:"",
+    ErrorImg:"../../../img/ErrorImg.png"
   },
 
   /**

@@ -19,7 +19,7 @@
     </view>
 
      <view class="tab-content">
-         <view class="tab-panel">
+         <view class="tab-panel active">
               <view id="Advertises" class="carousel {{(AdvertiseList.length>0)?'':'hidden'}}">
                     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoPlay}}" interval="5000" duration="500">
                         <block wx:for="{{AdvertiseList}}">
@@ -32,7 +32,7 @@
                     </swiper>
               </view>
 
-                            <view class="thumbnail {{(Advertise!=null)?'':'hidden'}}">
+                            <view id="Advertise" class="thumbnail {{(Advertise!=null)?'':'hidden'}}">
                                  <view class="thumbnail-img">
                                      <image src="{{Advertise.ImgUrl}}" mode="aspectFit"></image>
                                  </view>
@@ -43,6 +43,7 @@
                  <view class="header">专场推荐</view>
                  <view class="thumbnail-group">
                       <block wx:for="{{PromotionList}}" wx:for-item="Promotion" wx:for-index="PromotIndex">
+                          <view class="thumbnail-container">
                           <view class="thumbnail horizontal">
                               <view class="thumbnail-caption-header">
                                   <text>{{Promotion.PromotionName}}</text>
@@ -51,6 +52,7 @@
                               <view class="thumbnail-img">
                                   <image src="{{Promotion.ImgUrl}}" mode="aspectFit"></image>
                               </view>
+                          </view>
                           </view>
                       </block>
                  </view>
@@ -62,14 +64,16 @@
                  <view class="header" data-id="{{SmallCls.ClsId}}">{{SmallCls.ClsName}}</view>
                  <view class="thumbnail-group">
                        <block wx:for="{{SmallCls.Cls}}" wx:for-item="Cls" wx:for-index="GoodIndex">
+                             <view class="thumbnail-container">
                              <view class="thumbnail" data-id="{{Cls.ClsId}}">
                                   <view class="thumbnail-img">
-                                     <image src="{{Cls.ImgUrl}}" mode="aspecFit"></image>
+                                     <image src="{{Cls.ImgUrl==''?ErrorImg:Cls.ImgUrl}}" mode="aspecFit"></image>
                                   </view>
                                   <view class="thumbnail-caption">
                                       <text>{{Cls.ClsName}}</text>
                                   </view>
                              </view>
+                             </view>                            
                        </block>   
                  </view>
               </view>

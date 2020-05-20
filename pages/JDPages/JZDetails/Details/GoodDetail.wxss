@@ -1,0 +1,150 @@
+/* pages/JDPages/JZDetails/Details/GoodDetail.wxss */
+@import "../../../css/jzIco.wxss";
+@import "../../../css/jzControl.wxss";
+.container{
+  padding: 0;
+  align-items: flex-start;
+  background-color: #f7f7f7;
+}
+
+#goodImg{
+  margin-bottom: 0;
+}
+#goodImg .badge-ellipse{
+  background-color: #383432;
+  opacity: 0.7;
+
+  position: absolute;
+  bottom: 20rpx;
+  right: 5rpx;
+}
+#goodSundry .body{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+#PriceArea{
+  align-items: center;
+}
+#PriceArea .price{
+   margin-right: auto!important;
+}
+#PriceArea .badge-circle{
+   width: 30rpx;
+   height: 30rpx;
+   border-radius: 25rpx;
+}
+#PriceArea .Anchor-Item{
+   margin-right: 14.48rpx;
+}
+#PriceArea .jzIcon{
+   height: 30rpx;
+}
+#TitleArea .caption{
+    -webkit-line-clamp: 2;
+    margin-top: 14.48rpx;
+    font-size: 32rpx;
+}
+#Address .leader,
+#Select .leader,
+#Promotion .leader{
+   flex-basis: 15%;
+}
+#Address .contenter,
+#Select .contenter,
+#Promotion .contenter{
+   flex-basis: 80%;
+}
+#Promotion .badge-ellipse{
+   margin-right: 8rpx;
+}
+#Services .contenter{
+  display: flex;
+  flex-direction: row;
+  flex-basis: 95%;
+  flex-wrap: wrap;
+}
+#Address .Anchor-Item,
+#Select .Anchor-Item,
+#Promotion .Anchor-Item{
+   align-items: flex-start;
+   justify-content: center;
+}
+#Promotion .contenter .caption{
+   -webkit-line-clamp: 2;
+}
+#Promotion .title-container{
+   justify-content: flex-start;
+   align-items: flex-start;
+}
+#Promotion .Anchor-Item+.Anchor-Item{
+    margin-top: 8rpx;
+}
+#Address .jzIcon,
+#Select .jzIcon,
+#Promotion .jzIcon,
+#Services .jzIcon{
+   flex-basis: 5%;
+}
+#Services{
+  background-color: #fafafa;
+}
+#Services .text-container{
+  width: auto;
+  align-items: center;
+}
+#Services .jzIcon-ok-circle{
+    color: #de3c2c;
+}
+#EvaluateArea .header{
+   align-items: flex-end;
+}
+.body+.body{
+    border-top: 1px solid #fafafa;
+}
+#EvaluateArea .body .caption{
+    -webkit-line-clamp: 3;
+}
+#EvaluateArea .body .ETime{
+   color: #999999;
+}
+#EvaluateArea .body .thumbnail-group .thumbnail image{
+     height: 200rpx;
+     width: 150rpx;
+}
+#EvaluateArea .body>.header{
+    font-size: 22rpx;   
+    align-items: center;
+}
+#AfterSale .header{
+    background-color: #fff;
+    text-align: center;
+    width: 150rpx;
+    z-index: 99;
+    margin-left: auto;
+    margin-right: auto;
+}
+#AfterSale .body{
+    border-top: 1px solid #ccc;
+    padding: 18rpx;
+    margin-top: -22rpx;
+}
+#footer .badge-ellipse{
+   padding-top: 8rpx;
+   padding-bottom: 8rpx;
+}
+.tab-panel .card{
+   margin-bottom: 0;
+}
+#CartNum{
+   width: 25rpx;
+   height: 25rpx;
+   border: 1px solid #de3c2c;
+   background-color:#fff;
+   color: #de3c2c;
+   
+   position: absolute;
+   top:0;
+   left:50%;
+   z-index: 99;
+}

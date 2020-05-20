@@ -909,6 +909,21 @@
 .jzIcon-home::before{
       content: "到家";
 }
+.jzIcon-money::before{
+      content: "賺";
+}
+.jzIcon-free::before{
+    content: "零";
+}
+.jzIcon-cute::before{
+  content: "萌";
+}
+.jzIcon-no-fee::before{
+  content: "免";
+}
+.jzIcon-idle::before{
+  content: "闲";
+}
 
 
 

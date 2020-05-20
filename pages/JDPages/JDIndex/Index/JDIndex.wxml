@@ -59,7 +59,7 @@
 	<view class="container16">
 		<view id="SeckillArea" class="card">
 			<view class="header">
-				    <text>京东秒杀</text>
+				    <text>JZ秒杀</text>
 						<view class="badge-group">
 								<text class="badge-ellipse">{{Times}}点场</text>
                 <text class="badge-ellipse">{{KillTime}}</text>
@@ -150,25 +150,28 @@
 
 			<view class="tab-content">
 				<block wx:for="{{Goods}}" wx:for-item="Good">
-					<view class="tab-panel" hidden="{{!(CurrentId==Good[0].ParentId)}}" data-parent="{{Good[0].ParentId}}">
+					<view class="tab-panel {{(CurrentId==Good[0].ParentId)?'active':''}}" data-parent="{{Good[0].ParentId}}">
 						<view class="thumbnail-group">
 							<block wx:for="{{Good}}" wx:for-item="GObj">
+							<view class="thumbnail-container">
 								<view class="thumbnail">
 									<view class="thumbnail-img">
-										<image src="{{GObj.GoodImg}}" mode="aspectFit"></image>
+										<image src="{{GObj.GoodImg==''?ErrorImg:GObj.GoodImg}}" mode="aspectFit"></image>
 									</view>
 									<view class="thumbnail-caption">
-										<view class="Title">
-											<text>{{GObj.logistics}} {{GObj.GoodName}}</text>
+										<view class="title-container">
+										   <text class="badge-ellipse {{GObj.logistics==''?'hidden':''}}">{{GObj.logistics}}</text>
+											<text class="caption" style="text-indent:{{GObj.logistics.length*24+16}}rpx">{{GObj.GoodName}}</text>
 										</view>
-										<view class="Price">
-											<text class="good-price">{{GObj.NewPrice}}</text>
+										<view class="price-container">
+											<text class="price">{{GObj.NewPrice}}</text>
 											<text class="badge-ellipse">看相似</text>
 										</view>
 										<view class="Prompt">
 											<text>{{GObj.Prompt}}</text>
 										</view>
 									</view>
+								</view>
 								</view>
 							</block>
 						</view>

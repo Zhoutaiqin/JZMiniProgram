@@ -1,1 +1,104 @@
-/* pages/JDPages/JDSelf/Self/SelfIndex.wxss */
+/* pages/JDPages/JDSelf/Self/SelfIndex.wxss 
+   字体图标只能设置前景色
+*/
+@import "../../../css/jzIco.wxss";
+@import "../../../css/jzControl.wxss";
+page{
+  font-size: 25rpx;
+}
+.container{
+   padding: 0;
+   align-items: flex-start;
+  background-color: #f7f7f7;
+}
+.card{
+   box-shadow: none;
+   -webkit-box-shadow:none;
+   border-radius: 0;
+}
+#Account{
+   align-items: center;
+   background-image: linear-gradient(to right,#eb3c3c,#fe7359);
+   color: #fff;
+   padding-top: 30rpx;
+   padding-bottom: 30rpx;
+}
+#Account .img-circle{
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50rpx;
+}
+#Account>.img-container,
+#Account>.text-container{
+   width: auto;
+}
+#Account>.text-container{
+   flex-direction: column;
+}
+#Account>.text-container>view+view{
+   margin-top: 8rpx;
+}
+#Account .nick-container>text+text,
+#Account .id-container>text+text{
+   margin-left: 8rpx;
+}
+#Account .set-container{
+    position: absolute;
+    top: 20rpx;
+    right: 20rpx;
+    width: auto;
+    color: #80211a;
+}
+#Orders .jzIcon{
+   color: #dd9e58;
+}
+.Anchor-Item>text+text{
+    margin-top: 16rpx;
+}
+#Asset .Anchor-Item>text:first-child,
+#Asset .jzIcon-tag,
+#Orders .jzIcon-list-alt{
+   color: #e93b3d;
+}
+#Favorite .Anchor-Item>text:first-child{
+   font-weight: 600;
+}
+#Others>.text-group>.Anchor-Item{
+    flex:0 0 25%;
+    padding: 10rpx 0;
+}
+#Others .jzIcon-user,
+#Others .jzIcon-time,
+#Others .jzIcon-question-sign{
+   color: #ffac1d;
+   font-size: 30rpx;
+}
+#Others .jzIcon-money,
+#Others .jzIcon-no-fee,
+#Others .jzIcon-free,
+#Others .jzIcon-cute,
+#Others .jzIcon-idle{
+   width: 35rpx;
+   height: 35rpx;
+   border-radius: 35rpx;
+   text-align: center;
+}
+#Others .jzIcon-idle,
+#Others .jzIcon-free,
+#Others .jzIcon-cute{
+   background-color: #ffac1d;
+   color: #fff;
+}
+#Others .jzIcon-money,
+#Others .jzIcon-no-fee{
+   background-color: #ed2e25;
+   color: #fff;
+}
+#Others .jzIcon-envelope{
+    color:#e93b3d;
+    font-size: 30rpx;
+}
+#Others .jzIcon-refresh{
+    color: #44cdbf;
+    font-size: 30rpx;
+}
